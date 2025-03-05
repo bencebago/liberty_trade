@@ -1,0 +1,89 @@
+---
+title: "Liberty Pilot"
+author: "Bence Bago"
+date: "2025-03-04"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+
+column_names <- names(read.csv("Liberty - Pilot_March 4, 2025_13.00.csv", nrows = 1))
+
+df <- read.csv("Liberty - Pilot_March 4, 2025_13.00.csv", sep=",", header = FALSE, skip=165)
+
+names(df) <- column_names
+
+df_long <- df %>%
+  pivot_longer(
+    cols = matches("safety|convenience|monetary"),  # Select columns with specific keywords
+    names_to = c("freedom", "benefit"),
+    names_sep = "_",  # Adjust if needed
+    values_to = "rating"
+  ) %>%
+  drop_na(rating) 
+
+
+
+```
+
+
+```{r graphs}
+
+freedom_order <- df_long %>%
+  group_by(freedom) %>%
+  summarize(mean_dv = mean(rating, na.rm = TRUE)) %>%
+  arrange(desc(mean_dv)) %>%
+  pull(freedom)
+
+# Create bar plot with overlaid points
+ggplot(df_long, aes(x = rating, y = factor(freedom, levels = freedom_order))) +
+  geom_boxplot(fill = "steelblue", alpha = 0.6, outlier.shape = NA) +  # Boxplots without outliers
+  geom_jitter(aes(color = freedom), width = 0.1, alpha = 0.5) +  # Add individual points
+  labs(
+    x = "Average acceptibility",
+    y = "Freedom",
+    title = "Average acceptability rating per Freedom",
+    caption = "Bars show means, points represent individual rates"
+  ) +
+  theme_minimal() + 
+  theme(
+    text = element_text(size = 14),
+    plot.title = element_text(face = "bold"),
+    legend.position = "none"
+  )
+
+benefit_order <- df_long %>%
+  group_by(benefit) %>%
+  summarize(mean_dv = mean(rating, na.rm = TRUE)) %>%
+  arrange(desc(mean_dv)) %>%
+  pull(benefit)
+
+# Create bar plot with overlaid points
+ggplot(df_long, aes(x = rating, y = factor(benefit, levels = benefit_order))) +
+  geom_boxplot(fill = "steelblue", alpha = 0.6, outlier.shape = NA) +  # Boxplots without outliers
+  geom_jitter(aes(color = benefit), width = 0.1, alpha = 0.5) +  # Add individual points
+  labs(
+    x = "Average acceptibility",
+    y = "Benefit",
+    title = "Average acceptability rating per Benefit",
+    caption = "Bars show means, points represent individual rates"
+  ) +
+  theme_minimal() + 
+  theme(
+    text = element_text(size = 14),
+    plot.title = element_text(face = "bold"),
+    legend.position = "none"
+  )
+
+
+
+
+
+```
+
+
+```{r pressure, echo=FALSE}
+
+
+```
