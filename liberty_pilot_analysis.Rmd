@@ -13,6 +13,7 @@ column_names <- names(read.csv("Liberty - Pilot_March 4, 2025_13.00.csv", nrows 
 df <- read.csv("Liberty - Pilot_March 4, 2025_13.00.csv", sep=",", header = FALSE, skip=165)
 
 names(df) <- column_names
+df$condition = 'High cost / Low benefit'
 
 df_long <- df %>%
   pivot_longer(
@@ -24,10 +25,32 @@ df_long <- df %>%
   drop_na(rating) 
 
 
+library(tidyverse)
+
+column_names <- names(read.csv("benefit_March 5, 2025_10.02.csv", nrows = 1))
+
+df2 <- read.csv("benefit_March 5, 2025_10.02.csv", sep=",", header = FALSE, skip=165)
+
+names(df2) <- column_names
+df2$condition = 'Low cost / High benefit'
+
+df_long_2 <- df2 %>%
+  pivot_longer(
+    cols = matches("safety|convenience|monetary"),  # Select columns with specific keywords
+    names_to = c("freedom", "benefit"),
+    names_sep = "_",  # Adjust if needed
+    values_to = "rating"
+  ) %>%
+  drop_na(rating) 
+
+df_long_full = rbind(df_long, df_long_2)
+
+df_full = rbind(df,df2)
+
 
 ```
 
-
+# Analysis of the High cost / Low benefit
 ```{r graphs}
 
 freedom_order <- df_long %>%
@@ -82,8 +105,351 @@ ggplot(df_long, aes(x = rating, y = factor(benefit, levels = benefit_order))) +
 
 ```
 
+```{r graphs + variance}
 
-```{r pressure, echo=FALSE}
+\library(tidyverse)
+
+
+freedom_stats <- df_long %>%
+  group_by(freedom) %>%
+  summarize(
+    mean_dv = mean(rating, na.rm = TRUE),
+    var_dv = var(rating, na.rm = TRUE)
+  ) %>%
+  arrange(desc(mean_dv))
+
+freedom_order <- pull(freedom_stats, freedom)
+
+max_x <- max(df_long$rating, na.rm = TRUE) + 5
+
+ggplot(df_long, aes(x = rating, y = factor(freedom, levels = freedom_order))) +
+  geom_boxplot(fill = "steelblue", alpha = 0.6, outlier.shape = NA) +  # Boxplots without outliers
+  geom_jitter(aes(color = freedom), width = 0.1, alpha = 0.5) +  # Add individual points
+  geom_text(
+    data = freedom_stats,
+    aes(x = max_x, y = freedom, label = round(var_dv, 2)),
+    hjust = 0, size = 5, fontface = "bold", color = "black"
+  ) +  # Add variance labels to the right
+  annotate("text", x = max_x, y = length(unique(df_long$freedom)) + 0.5, 
+           label = "Var", size = 6, hjust = 0) +  # Add "Variance" title at the top
+  xlim(0, max_x + 10) +  # Extend x-axis range to prevent cut-off
+  labs(
+    x = "Average Acceptability",
+    y = "Freedom",
+    title = "Average Acceptability Rating per Freedom",
+    caption = "Boxplots show distributions, points represent individual ratings"
+  ) +
+  theme_minimal() + 
+  theme(
+    text = element_text(size = 14),
+    plot.title = element_text(face = "bold"),
+    legend.position = "none",
+    plot.margin = margin(10, 50, 10, 10)  # Expand right margin
+  )
+
+
+### --- SECOND GRAPH: BENEFIT ORDER ---
+
+# Compute means & variance for ordering
+benefit_stats <- df_long %>%
+  group_by(benefit) %>%
+  summarize(
+    mean_dv = mean(rating, na.rm = TRUE),
+    var_dv = var(rating, na.rm = TRUE)
+  ) %>%
+  arrange(desc(mean_dv))
+
+benefit_order <- pull(benefit_stats, benefit)
+
+# Find max rating value for label placement
+max_x <- max(df_long$rating, na.rm = TRUE) + 5
+
+ggplot(df_long, aes(x = rating, y = factor(benefit, levels = benefit_order))) +
+  geom_boxplot(fill = "steelblue", alpha = 0.6, outlier.shape = NA) +  # Boxplots without outliers
+  geom_jitter(aes(color = benefit), width = 0.1, alpha = 0.5) +  # Add individual points
+  geom_text(
+    data = benefit_stats,
+    aes(x = max_x, y = benefit, label = round(var_dv, 2)),
+    hjust = 0, size = 5, fontface = "bold", color = "black"
+  ) +  # Add variance labels to the right
+  annotate("text", x = max_x, y = length(unique(df_long$benefit)) + 0.5, 
+           label = "Var", size = 6, hjust = 0) +  # Add "Variance" title at the top
+  xlim(0, max_x + 10) +  # Extend x-axis range to prevent cut-off
+  labs(
+    x = "Average Acceptability",
+    y = "Benefit",
+    title = "Average Acceptability Rating per Benefit",
+    caption = "Boxplots show distributions, points represent individual ratings"
+  ) +
+  theme_minimal() + 
+  theme(
+    text = element_text(size = 14),
+    plot.title = element_text(face = "bold"),
+    legend.position = "none",
+    plot.margin = margin(10, 50, 10, 10)  # Expand right margin
+  )
+
+
+
+
+```
+
+```{r testing}
+
+df_long_final_income = df_long_final %>%
+  filter(Income!=7 & benefit == 'monetary')
+
+cor.test(df_long_final_income$rating, df_long_final_income$Income)
+#not significant
+
+
+
+```
+
+# Analysis of the High cost / Low benefit
+```{r graphs full}
+
+library(tidyverse)
+
+### --- FIRST GRAPH: FREEDOM ORDER WITH CONDITION ---
+
+# Compute means for ordering
+freedom_order <- df_long_full %>%
+  group_by(freedom) %>%
+  summarize(mean_dv = mean(rating, na.rm = TRUE)) %>%
+  arrange(desc(mean_dv)) %>%
+  pull(freedom)
+
+ggplot(df_long_full, aes(x = rating, y = factor(freedom, levels = freedom_order), fill = condition)) +
+  geom_boxplot(alpha = 0.6, outlier.shape = NA, position = position_dodge(width = 0.8)) +  # Side-by-side boxplots
+  geom_jitter(aes(color = condition), alpha = 0.5, position = position_jitterdodge(jitter.width = 0.2, dodge.width = 0.8)) +  # Jittered points with dodging
+  labs(
+    x = "Average Acceptability",
+    y = "Freedom",
+    title = "Average Acceptability Rating per Freedom by Condition",
+  ) +
+  theme_minimal() + 
+  theme(
+    text = element_text(size = 14),
+    plot.title = element_text(face = "bold"),
+    legend.position = "top"
+  )
+
+
+### --- SECOND GRAPH: BENEFIT ORDER WITH CONDITION ---
+
+# Compute means for ordering
+benefit_order <- df_long_full %>%
+  group_by(benefit) %>%
+  summarize(mean_dv = mean(rating, na.rm = TRUE)) %>%
+  arrange(desc(mean_dv)) %>%
+  pull(benefit)
+
+ggplot(df_long_full, aes(x = rating, y = factor(benefit, levels = benefit_order), fill = condition)) +
+  geom_boxplot(alpha = 0.6, outlier.shape = NA, position = position_dodge(width = 0.8)) +  # Side-by-side boxplots
+  geom_jitter(aes(color = condition), alpha = 0.5, position = position_jitterdodge(jitter.width = 0.2, dodge.width = 0.8)) +  # Jittered points with dodging
+  labs(
+    x = "Average Acceptability",
+    y = "Benefit",
+    title = "Average Acceptability Rating per Benefit by Condition",
+  ) +
+  theme_minimal() + 
+  theme(
+    text = element_text(size = 14),
+    plot.title = element_text(face = "bold"),
+    legend.position = "top"
+  )
+
+library(tidyverse)
+
+# Compute mean and standard error per condition
+condition_means <- df_long_full %>%
+  group_by(condition) %>%
+  summarize(
+    mean_rating = mean(rating, na.rm = TRUE),
+    se_rating = sd(rating, na.rm = TRUE) / sqrt(n())  # Standard error
+  )
+
+# Create bar plot with error bars
+ggplot(condition_means, aes(x = condition, y = mean_rating, fill = condition)) +
+  geom_col(alpha = 0.7, width = 0.5) +  # Bars representing means
+  geom_errorbar(aes(ymin = mean_rating - se_rating, ymax = mean_rating + se_rating), 
+                width = 0.2, color = "black") +  # Error bars for standard error
+  labs(
+    x = "Condition",
+    y = "Mean Acceptability Rating",
+    title = "Comparison of Mean Acceptability Ratings Across Conditions",
+    caption = "Bars represent mean ratings with standard error"
+  ) +
+  theme_minimal() + 
+  theme(
+    text = element_text(size = 14),
+    plot.title = element_text(face = "bold"),
+    legend.position = "none"
+  )
+
+
+```
+
+```{r self_report, echo=FALSE}
+
+
+# Select only Q9_1 to Q9_10
+df_selected <- df_full %>%
+  select(Q9_1:Q9_10, prolificID)
+
+# Compute row averages for duplicate categories (privacy, process)
+df_selected <- df_selected %>%
+  mutate(
+    privacy = rowMeans(select(., Q9_3, Q9_4), na.rm = TRUE),
+    process = rowMeans(select(., Q9_5, Q9_6), na.rm = TRUE)
+  ) %>%
+  select(-Q9_3, -Q9_4, -Q9_5, -Q9_6)  # Drop original columns
+
+# Rename columns as specified
+df_renamed <- df_selected %>%
+  rename(
+    speech = Q9_1,
+    press = Q9_2,
+    equal = Q9_7,
+    assoc = Q9_8,
+    petition = Q9_9,
+    vote = Q9_10
+  )
+
+# Convert to long format
+df_long2 <- df_renamed %>%
+  pivot_longer(
+    cols =   -prolificID, 
+    names_to = "freedom",
+    values_to = "self_rate"
+  ) %>%
+  drop_na(self_rate)  
+
+variance_df <- df_long2 %>%
+  group_by(freedom) %>%
+  summarize(var_self_rate = var(self_rate, na.rm = TRUE)) %>%
+  mutate(var_label = round(var_self_rate, 2))  # Round variance for cleaner display
+
+
+max_x <- max(df_long2$self_rate, na.rm = TRUE) + 1.5
+
+ggplot(df_long2, aes(y = freedom, x = self_rate)) +
+  geom_boxplot(fill = "steelblue", alpha = 0.6, outlier.shape = NA) +  # Boxplots without outliers
+  geom_jitter(aes(color = freedom), width = 0.1, alpha = 0.5, size = 2) +  # Individual points
+  geom_text(
+    data = variance_df,
+    aes(x = max_x, y = fct_rev(factor(freedom)), label = var_label),
+    hjust = 0, size = 5, fontface = "bold", color = "black"
+  ) +  # Add variance numbers to the right
+  annotate("text", x = max_x, y = length(unique(df_long2$freedom)) + 0.5, 
+           label = "Var", size = 6,  hjust = 0) +  # Add "Variance" title at the top
+  xlim(0, max_x + 10) +  # Extend x-axis range to prevent cut-off
+  labs(
+    x = "Self-Rating",
+    y = "Freedom",
+    title = "Distribution of Self-Ratings for Different Freedoms",
+    subtitle = "Boxplots show distribution, jittered points show individual responses",
+  ) +
+  theme_minimal() + 
+  theme(
+    text = element_text(size = 14),
+    plot.title = element_text(face = "bold"),
+    plot.subtitle = element_text(size = 12, face = "italic"),
+    axis.text.y = element_text(face = "bold"),
+    legend.position = "none",
+    plot.margin = margin(10, 50, 10, 10)  # Expands right margin to prevent cut-off
+  )
+
+# Create boxplot with jittered points
+ggplot(df_long2, aes(y = freedom, x = self_rate)) +
+  geom_boxplot(fill = "steelblue", alpha = 0.6, outlier.shape = NA) +  # Boxplots without outliers
+  geom_jitter(aes(color = freedom), width = 0.1, alpha = 0.5, size = 2) +  # Individual points
+  labs(
+    x = "Self-Rating",
+    y = "Freedom",
+    title = "Distribution of Self-Ratings for Different Freedoms",
+    subtitle = "Boxplots show distribution, jittered points show individual responses",
+  ) +
+  theme_minimal() + 
+  theme(
+    text = element_text(size = 14),
+    plot.title = element_text(face = "bold"),
+    plot.subtitle = element_text(size = 12, face = "italic"),
+    axis.text.y = element_text(face = "bold"),
+    legend.position = "none"
+  )
+
+
+df_long_final = df_long_full %>%
+  left_join(df_long2, by=c('prolificID', 'freedom'))
+
+cor.test(df_long_final$rating, df_long_final$self_rate)
+
+
+
+
+```
+
+```{r testing}
+
+df_long_final_income = df_long_full %>%
+  filter(Income!=7 & benefit == 'convenience' & condition == 'Low cost / High benefit')
+
+cor.test(df_long_final_income$rating, df_long_final_income$Income)
+
+
+
+
+
+df_long_final_income = df_long_full %>%
+  filter(Education!=7 & benefit == 'monetary' & condition == 'High cost / Low benefit')
+
+cor.test(df_long_final_income$rating, df_long_final_income$Education)
+
+
+
+df_long_final_income = df_long_full %>%
+  filter(race!=7  & condition == 'Low cost / High benefit' & freedom == 'vote')%>%
+  mutate(race_black = ifelse(race==1,1,0))
+
+cor.test(df_long_final_income$rating, df_long_final_income$race_black)
+
+library(lmerTest)
+model1=lmer(scale(rating) ~ (1|prolificID) + (condition|freedom) + (condition|benefit) + condition, data=df_long_full, na.action=na.omit)
+summary(model1)
+
+
+rejecters <- df_long_full %>%
+  group_by(prolificID) %>%
+  summarize(all_zeros = all(rating == 0))  # Check if all 8 ratings are 0
+
+num_rejecters <- sum(rejecters$all_zeros)
+total_participants <- n_distinct(df_long_full$prolificID)
+percentage_rejecters <- (num_rejecters / total_participants) * 100
+
+# Create a table with results
+rejecters_summary <- data.frame(
+  Total_Participants = total_participants,
+  Consistent_Rejecters = num_rejecters,
+  Percentage = round(percentage_rejecters, 2)
+)
+
+rejecters_summary 
+
+rejecters <- df_long_full %>%
+  group_by(prolificID, condition) %>%
+  summarize(all_zeros = all(rating < 10)) %>%  # Check if all 8 ratings are 0
+  ungroup()
+
+# Count number of consistent rejecters per condition
+rejecters_summary <- rejecters %>%
+  group_by(condition) %>%
+  summarize(
+    Total_Participants = n_distinct(prolificID),
+    Consistent_Rejecters = sum(all_zeros)
+  ) %>%
+  mutate(Percentage = round((Consistent_Rejecters / Total_Participants) * 100, 2))  # Calculate percentage
 
 
 ```
