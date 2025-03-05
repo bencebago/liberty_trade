@@ -411,15 +411,68 @@ cor.test(df_long_final_income$rating, df_long_final_income$Education)
 
 df_long_final_income = df_long_full %>%
   filter(race!=7  & condition == 'Low cost / High benefit' & freedom == 'vote')%>%
-  mutate(race_black = ifelse(race==1,1,0))
+  mutate(race_white = ifelse(race==1,1,0))
 
-cor.test(df_long_final_income$rating, df_long_final_income$race_black)
+cor.test(df_long_final_income$rating, df_long_final_income$race_white)
+
+
+
 
 library(lmerTest)
 model1=lmer(scale(rating) ~ (1|prolificID) + (condition|freedom) + (condition|benefit) + condition, data=df_long_full, na.action=na.omit)
 summary(model1)
 
+#lets see with income, race, education
+df_long_demographics = df_long_full %>%
+  filter(race!=7) %>%
+  mutate(race_white = ifelse(race==1,1,-1))
 
+model1=lmer(scale(rating) ~ (1|prolificID) + (condition|freedom) + (condition|benefit) + race_white*condition, data=df_long_demographics, na.action=na.omit)
+summary(model1)
+
+
+df_long_demographics = df_long_full %>%
+  filter(Income!=7) 
+
+model1=lmer(scale(rating) ~ (1|prolificID) + (condition|freedom) + (condition|benefit) + scale(Income)*condition, data=df_long_demographics, na.action=na.omit)
+summary(model1)
+
+df_long_demographics = df_long_full %>%
+  filter(Education!=7)
+
+model1=lmer(scale(rating) ~ (1|prolificID) + (condition|freedom) + (condition|benefit) + scale(Education)*condition, data=df_long_demographics, na.action=na.omit)
+summary(model1)
+
+#race significantly interacts with condition such that cost/benefit ratio appears to matter less for non-white minorities
+
+condition_means <- df_long_full %>%
+  mutate(Race = ifelse(race==2, 'Black', ifelse( race==1, 'White', 'Other'))) %>%
+  group_by(condition, Race) %>%
+  summarize(
+    mean_rating = mean(rating, na.rm = TRUE),
+    se_rating = sd(rating, na.rm = TRUE) / sqrt(n())  # Standard error
+  )
+
+# Create bar plot with error bars
+ggplot(condition_means, aes(x = condition, y = mean_rating, fill = Race)) +
+  geom_col(alpha = 0.7, width = 0.5, position = position_dodge(width = 0.6)) +  # Side-by-side bars
+  geom_errorbar(aes(ymin = mean_rating - se_rating, ymax = mean_rating + se_rating), 
+                width = 0.2, color = "black", position = position_dodge(width = 0.6)) +  # Side-by-side error bars
+  labs(
+    x = "Condition",
+    y = "Mean Acceptability Rating",
+    title = "Comparison of Mean Acceptability Ratings Across Conditions by Race",
+    caption = "Bars represent mean ratings with standard error"
+  ) +
+  theme_minimal() + 
+  theme(
+    text = element_text(size = 14),
+    plot.title = element_text(face = "bold"),
+    legend.position = "top"  # Move legend to top for better visibility
+  )
+
+
+#testing for rejection consistency; are liberties sacred values for some?
 rejecters <- df_long_full %>%
   group_by(prolificID) %>%
   summarize(all_zeros = all(rating == 0))  # Check if all 8 ratings are 0
