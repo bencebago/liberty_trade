@@ -1,0 +1,27 @@
+factors:
+  - desc: playerCount determines the number of Players are in a Game.
+    name: playerCount
+    values:
+      - value: 2
+  - desc: roundNum determines the number of rounds in a Game.
+    name: roundNum
+    values:
+      - value: 1
+      - value: 3
+      - value: 5
+treatments:
+  - desc: "One-shot prisoner's dilemma"
+    factors:
+      playerCount: 2
+      roundNum: 1
+    name: baseline
+  - desc: "3 round prisoner's dilemma"
+    factors:
+      playerCount: 2
+      roundNum: 3
+    name: 3 round
+  - desc: "5 round prisoner's dilemma"
+    factors:
+      playerCount: 2
+      roundNum: 5
+    name: 5 round
