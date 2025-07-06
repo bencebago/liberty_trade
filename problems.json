@@ -1,0 +1,166 @@
+{
+  "problems": [
+    {
+      "id": 1,
+      "problem": "Social media feeds often become overwhelming due to excessive divisive debates, making costly moderation necessary.",
+      "solution": "Automatic filtering of discussions for high conflict content.",
+      "benefitType": "money",
+      "benefitText": "Users get $100 payback",
+      "costType": "speech",
+      "costText": "30% decrease in the accessibility of political opinions for"
+    },
+    {
+      "id": 2,
+      "problem": "Online platforms are frequently targeted by malicious actors who want to steal users' personal data.",
+      "solution": "AI-driven security filter that automatically removes information flagged as sensitive.",
+      "benefitType": "security",
+      "benefitText": "Security of personal information increased by 50%",
+      "costType": "speech",
+      "costText": "30% decrease in the accessibility of political opinions for"
+    },
+    {
+      "id": 3,
+      "problem": "Social media feeds often become overwhelming due to excessive divisive debates.",
+      "solution": "Automatic filtering of discussions for high conflict content.",
+      "benefitType": "convenience",
+      "benefitText": "50% increase in user well-being",
+      "costType": "speech",
+      "costText": "30% decrease in the accessibility of political opinions for"
+    },
+    {
+      "id": 4,
+      "problem": "There is a lot of false news circulating online, potentially misleading people.",
+      "solution": "Automatic fact-checking of online news.",
+      "benefitType": "convenience",
+      "benefitText": "50% reduction in false content exposure",
+      "costType": "press",
+      "costText": "30% decrease in content accessibility from media outlets for"
+    },
+    {
+      "id": 5,
+      "problem": "Operating news platforms is expensive, requiring significant investment in content moderation.",
+      "solution": "Automatic fact-checking of online news.",
+      "benefitType": "money",
+      "benefitText": "Reduce your monthly taxes by $100",
+      "costType": "press",
+      "costText": "30% decrease in content accessibility from media outlets for"
+    },
+    {
+      "id": 6,
+      "problem": "News articles on ongoing law enforcement operations can compromise the effectiveness of these operations.",
+      "solution": "AI-driven screening system that prevents the release of articles mentioning ongoing law enforcement operations.",
+      "benefitType": "security",
+      "benefitText": "Crime prevention improved by 50%",
+      "costType": "press",
+      "costText": "30% decrease in content accessibility from media outlets for"
+    },
+    {
+      "id": 7,
+      "problem": "Courtroom scheduling and procedures are often inefficient, leading to long waits for hearings and trial delays.",
+      "solution": "AI-powered scheduling system that optimizes court time usage by de-prioritizing certain cases.",
+      "benefitType": "convenience",
+      "benefitText": "Court proceedings made 50% faster",
+      "costType": "due_process",
+      "costText": "30% decrease in time for presenting evidence for people with cases typically associated with"
+    },
+    {
+      "id": 8,
+      "problem": "Courtroom services require significant government funding that could be allocated elsewhere.",
+      "solution": "AI-powered scheduling system that optimizes court time usage by de-prioritizing certain cases.",
+      "benefitType": "money",
+      "benefitText": "Save taxpayers $100 monthly",
+      "costType": "due_process",
+      "costText": "30% decrease in time for presenting evidence for people with cases typically associated with"
+    },
+    {
+      "id": 9,
+      "problem": "Courtroom services require significant government funding that could be redirected to law enforcement.",
+      "solution": "AI-powered scheduling system that optimizes court time usage by de-prioritizing certain cases.",
+      "benefitType": "security",
+      "benefitText": "Crime reduced by 50% through increased law enforcement budget",
+      "costType": "due_process",
+      "costText": "30% decrease in time for presenting evidence for people with cases typically associated with"
+    },
+    {
+      "id": 10,
+      "problem": "Large public meetings and protests require submitting applications to police, which is very time-consuming.",
+      "solution": "Automatic approval or rejection system for protests and large events.",
+      "benefitType": "convenience",
+      "benefitText": "Event approval made 50% faster and easier",
+      "costType": "association",
+      "costText": "Events are 30% less likely to be approved when organized by"
+    },
+    {
+      "id": 11,
+      "problem": "Processing applications for large public meetings and protests is costly for the government.",
+      "solution": "Automatic approval or rejection system for protests and large events.",
+      "benefitType": "money",
+      "benefitText": "$100 tax reduction for citizens",
+      "costType": "association",
+      "costText": "Events are 30% less likely to be approved when organized by"
+    },
+    {
+      "id": 12,
+      "problem": "Large group events can escalate and become threatening or violent, affecting surrounding area safety.",
+      "solution": "Automatic approval or rejection system for protests and large events.",
+      "benefitType": "security",
+      "benefitText": "Threatening or violent events reduced by 50%",
+      "costType": "association",
+      "costText": "Events are 30% less likely to be approved when organized by"
+    },
+    {
+      "id": 13,
+      "problem": "Hiring decisions for government agencies can be slow and inefficient, delaying job placements and workforce expansion.",
+      "solution": "AI screening and ranking system to identify the most qualified candidates.",
+      "benefitType": "convenience",
+      "benefitText": "Hiring process made 50% faster",
+      "costType": "equality",
+      "costText": "30% reduction in consideration for applicants typically associated with"
+    },
+    {
+      "id": 14,
+      "problem": "Employee recruitment and training are expensive for government agencies, requiring significant investment.",
+      "solution": "AI screening and ranking system to identify the most qualified candidates.",
+      "benefitType": "money",
+      "benefitText": "$100 tax return for citizens",
+      "costType": "equality",
+      "costText": "30% reduction in consideration for applicants typically associated with"
+    },
+    {
+      "id": 15,
+      "problem": "Government agencies handle sensitive personal data, creating risks of data theft or leaks by employees.",
+      "solution": "AI screening and ranking system to identify the most trustworthy candidates.",
+      "benefitType": "security",
+      "benefitText": "Personal data security improved by 50%",
+      "costType": "equality",
+      "costText": "30% reduction in consideration for applicants typically associated with"
+    },
+    {
+      "id": 16,
+      "problem": "Government services often require complicated, time-intensive paperwork due to fraud prevention needs.",
+      "solution": "AI-powered system to predict applicant trustworthiness.",
+      "benefitType": "convenience",
+      "benefitText": "Applications made 50% easier and faster",
+      "costType": "privacy",
+      "costText": "30% more private information accessed during the application process for"
+    },
+    {
+      "id": 17,
+      "problem": "Government services require extensive oversight and verification procedures that are costly to maintain.",
+      "solution": "AI-powered system to predict applicant trustworthiness.",
+      "benefitType": "money",
+      "benefitText": "$100 reduction in taxes spent on oversight",
+      "costType": "privacy",
+      "costText": "30% more private information accessed during the application process for"
+    },
+    {
+      "id": 18,
+      "problem": "The government aims to reduce petty crime and identify potentially dangerous individuals in public spaces.",
+      "solution": "AI-powered system to predict individual trustworthiness based on public behavior.",
+      "benefitType": "security",
+      "benefitText": "Public safety improved by 50%",
+      "costType": "privacy",
+      "costText": "30% more private information accessed based on public movements for"
+    }
+  ]
+}
