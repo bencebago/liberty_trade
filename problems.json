@@ -155,7 +155,7 @@
     },
     {
       "id": 18,
-      "problem": "The government aims to reduce petty crime and identify potentially dangerous individuals in public spaces.",
+      "problem": "Governments are often unable to keep up with the amount of petty crime and dangerous behavior in public spaces.",
       "solution": "AI-powered system to predict individual trustworthiness based on public behavior.",
       "benefitType": "security",
       "benefitText": "[number]% improved public safety",
