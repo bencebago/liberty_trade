@@ -77,7 +77,7 @@
       "problem": "Courtroom services require significant government funding that could be redirected to law enforcement.",
       "solution": "AI-powered scheduling system that optimizes court time usage by de-prioritizing certain cases.",
       "benefitType": "security",
-      "benefitText": "[number]% reduced crime due to increased law enforcement budget",
+      "benefitText": "[number]% reduced crime due to increased law enforcement",
       "costType": "due_process",
       "costText": "[number]% decreased time to present evidence in cases that typically affect [affected]"
     },
