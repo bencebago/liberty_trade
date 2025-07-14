@@ -2,165 +2,165 @@
   "problems": [
     {
       "id": 1,
-      "problem": "Social media feeds often require costly moderation to mitigate excessive divisive debates.",
+      "problem": "Social media feeds often require costly moderation to reduce excessive divisive debates.",
       "solution": "Automatic filtering of discussions for high conflict content.",
       "benefitType": "money",
       "benefitText": "$[number] payback for users",
       "costType": "speech",
-      "costText": "[number]% decrease in the accessibility of political opinions for [affected]"
+      "costText": "[number]% decreased accessibility of political opinions for [affected]"
     },
     {
       "id": 2,
-      "problem": "Online platforms are frequently targeted by malicious actors who want to steal users' personal data.",
+      "problem": "Online platforms are frequently targeted by bad actors who want to steal users' personal data.",
       "solution": "AI-driven security filter that automatically removes information flagged as sensitive.",
       "benefitType": "security",
-      "benefitText": "[number]% increase in security of personal information",
+      "benefitText": "[number]% increased security of personal information",
       "costType": "speech",
-      "costText": "[number]% decrease in the accessibility of political opinions for [affected]"
+      "costText": "[number]% decreased accessibility of political opinions for [affected]"
     },
     {
       "id": 3,
       "problem": "Social media feeds often become overwhelming due to excessive divisive debates.",
       "solution": "Automatic filtering of discussions for high conflict content.",
       "benefitType": "convenience",
-      "benefitText": "[number]% increase in user well-being",
+      "benefitText": "[number]% increased user well-being",
       "costType": "speech",
-      "costText": "[number]% decrease in the accessibility of political opinions for [affected]"
+      "costText": "[number]% decreased accessibility of political opinions for [affected]"
     },
     {
       "id": 4,
       "problem": "There is a lot of false news circulating online, potentially misleading people.",
       "solution": "Automatic fact-checking of online news.",
       "benefitType": "convenience",
-      "benefitText": "[number]% reduction in false content exposure",
+      "benefitText": "[number]% reduced false content exposure",
       "costType": "press",
-      "costText": "[number]% decrease in content accessibility from media outlets for [affected]"
+      "costText": "[number]% decreased content accessibility from media outlets for [affected]"
     },
     {
       "id": 5,
       "problem": "Operating news platforms is expensive, requiring significant investment in content moderation.",
       "solution": "Automatic fact-checking of online news.",
       "benefitType": "money",
-      "benefitText": "$[number] yearly reduction in taxes",
+      "benefitText": "$[number] reduced yearly taxes",
       "costType": "press",
-      "costText": "[number]% decrease in content accessibility from media outlets for [affected]"
+      "costText": "[number]% decreased content accessibility from media outlets for [affected]"
     },
     {
       "id": 6,
-      "problem": "News articles on ongoing law enforcement operations can compromise the effectiveness of these operations.",
+      "problem": "News articles on ongoing law enforcement operations can compromise the operation's effectiveness.",
       "solution": "AI-driven screening system that prevents the release of articles mentioning ongoing law enforcement operations.",
       "benefitType": "security",
-      "benefitText": "[number]% improvement in crime prevention",
+      "benefitText": "[number]% improved crime prevention",
       "costType": "press",
-      "costText": "[number]% decrease in content accessibility from media outlets for [affected]"
+      "costText": "[number]% decreased content accessibility from media outlets for [affected]"
     },
     {
       "id": 7,
       "problem": "Courtroom scheduling and procedures are often inefficient, leading to long waits for hearings and trial delays.",
-      "solution": "AI-powered scheduling system that optimizes court time usage by de-prioritizing certain cases.",
+      "solution": "AI-powered scheduling system that optimizes court time usagse by de-prioritizing certain cases.",
       "benefitType": "convenience",
       "benefitText": "[number]% faster court proceedings",
       "costType": "due_process",
-      "costText": "[number]% decrease in time for presenting evidence for people with cases typically associated with [affected]"
+      "costText": "[number]% decreased time to present evidence in cases that typically affect [affected]"
     },
     {
       "id": 8,
-      "problem": "Courtroom services require significant government funding that could be allocated elsewhere.",
+      "problem": "Courtroom services require significant government funding that could be directed elsewhere.",
       "solution": "AI-powered scheduling system that optimizes court time usage by de-prioritizing certain cases.",
       "benefitType": "money",
-      "benefitText": "$[number] yearly reduction in taxes",
+      "benefitText": "$[number] reduced yearly taxes",
       "costType": "due_process",
-      "costText": "[number]% decrease in time for presenting evidence for people with cases typically associated with [affected]"
+      "costText": "[number]% decreased time to present evidence in cases that typically affect [affected]"
     },
     {
       "id": 9,
       "problem": "Courtroom services require significant government funding that could be redirected to law enforcement.",
       "solution": "AI-powered scheduling system that optimizes court time usage by de-prioritizing certain cases.",
       "benefitType": "security",
-      "benefitText": "[number]% reduction in crime from increased law enforcement budget",
+      "benefitText": "[number]% reduced crime due to increased law enforcement budget",
       "costType": "due_process",
-      "costText": "[number]% decrease in time for presenting evidence for people with cases typically associated with [affected]"
+      "costText": "[number]% decreased time to present evidence in cases that typically affect [affected]"
     },
     {
       "id": 10,
-      "problem": "Large public meetings and protests require submitting applications to police, which is very time-consuming.",
+      "problem": "Large public meetings and protests require submitting time-consuming applications to police.",
       "solution": "Automatic approval or rejection system for protests and large events.",
       "benefitType": "convenience",
-      "benefitText": "[number]% faster and easier" event approval 
+      "benefitText": "[number]% faster and easier event approval", 
       "costType": "association",
-      "costText": "[number]% decrease in the likelihood of event approval when organized by [affected]"
+      "costText": "[number]% decreased likelihood of event approval when organized by [affected]"
     },
     {
       "id": 11,
       "problem": "Processing applications for large public meetings and protests is costly for the government.",
       "solution": "Automatic approval or rejection system for protests and large events.",
       "benefitType": "money",
-      "benefitText": "$[number] yearly reduction in taxes",
+      "benefitText": "$[number] reduced yearly taxes",
       "costType": "association",
-      "costText": "[number]% decrease in the likelihood of event approval when organized by [affected]"
+      "costText": "[number]% decreased likelihood of event approval when organized by [affected]"
     },
     {
       "id": 12,
       "problem": "Large group events can escalate and become threatening or violent, affecting surrounding area safety.",
       "solution": "Automatic approval or rejection system for protests and large events.",
       "benefitType": "security",
-      "benefitText": "[number]% reduction in threatening or violent events",
+      "benefitText": "[number]% reduced threatening or violent events",
       "costType": "association",
-      "costText": "[number]% decrease in the likelihood of event approval when organized by [affected]"
+      "costText": "[number]% decreased likelihood of event approval when organized by [affected]"
     },
     {
       "id": 13,
-      "problem": "Hiring decisions for government agencies can be slow and inefficient, delaying job placements and workforce expansion.",
+      "problem": "Hiring decisions for government agencies can be slow and inefficient, delaying important services.",
       "solution": "AI screening and ranking system to identify the most qualified applicants.",
       "benefitType": "convenience",
-      "benefitText": "[number]% faster" hiring process", 
+      "benefitText": "[number]% faster and more efficient government services", 
       "costType": "equality",
-      "costText": "[number]% reduction in consideration for applicants typically associated with [affected]"
+      "costText": "[number]% decreased consideration for applicants typically associated with [affected]"
     },
     {
       "id": 14,
       "problem": "Employee recruitment and training are expensive for government agencies, requiring significant investment.",
       "solution": "AI screening and ranking system to identify the most qualified applicants.",
       "benefitType": "money",
-      "benefitText": "$[number] yearly reduction in taxes",
+      "benefitText": "$[number] reduced yearly taxes",
       "costType": "equality",
-      "costText": "[number]% reduction in consideration for applicants typically associated with [affected]"
+      "costText": "[number]% decreased consideration for applicants typically associated with [affected]"
     },
     {
       "id": 15,
       "problem": "Government agencies handle sensitive personal data, creating risks of data theft or leaks by employees.",
       "solution": "AI screening and ranking system to identify the most trustworthy applicants.",
       "benefitType": "security",
-      "benefitText": "[number]% improvement in personal data security",
+      "benefitText": "[number]% improved personal data security",
       "costType": "equality",
-      "costText": "[number]% reduction in consideration for applicants typically associated with [affected]"
+      "costText": "[number]% decreased consideration for applicants typically associated with [affected]"
     },
     {
       "id": 16,
-      "problem": "Government services often require complicated, time-intensive paperwork due to fraud prevention needs.",
+      "problem": "Government services often require complicated, time-intensive paperwork to prevent fraud.",
       "solution": "AI-powered system to predict applicant trustworthiness.",
       "benefitType": "convenience",
       "benefitText": "[number]% easier and faster applications",
       "costType": "privacy",
-      "costText": "[number]% more private information accessed during the application process for [affected]"
+      "costText": "[number]% increased access to private information during the application process for [affected]"
     },
     {
       "id": 17,
-      "problem": "Government services require extensive oversight and verification procedures that are costly to maintain.",
+      "problem": "Government services require costly oversight and verification procedures.",
       "solution": "AI-powered system to predict applicant trustworthiness.",
       "benefitType": "money",
-      "benefitText": "$[number] yearly reduction in taxes",
+      "benefitText": "$[number] reduced yearly taxes",
       "costType": "privacy",
-      "costText": "[number]% more private information accessed during the application process for [affected]"
+      "costText": "[number]% increased access to private information during the application process for [affected]"
     },
     {
       "id": 18,
       "problem": "The government aims to reduce petty crime and identify potentially dangerous individuals in public spaces.",
       "solution": "AI-powered system to predict individual trustworthiness based on public behavior.",
       "benefitType": "security",
-      "benefitText": "[number]% improvement in public safety",
+      "benefitText": "[number]% improved public safety",
       "costType": "privacy",
-      "costText": "[number]% more private information accessed based on public movements for [affected]"
+      "costText": "[number]% increased access to private information based on public movements for [affected]"
     }
   ]
 }
