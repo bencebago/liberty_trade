@@ -2,10 +2,10 @@
   "problems": [
     {
       "id": 1,
-      "problem": "Social media feeds often become overwhelming due to excessive divisive debates, making costly moderation necessary.",
+      "problem": "Social media feeds often require costly moderation to mitigate excessive divisive debates.",
       "solution": "Automatic filtering of discussions for high conflict content.",
       "benefitType": "money",
-      "benefitText": "Users get $[number] payback",
+      "benefitText": "$[number] payback for users",
       "costType": "speech",
       "costText": "[number]% decrease in the accessibility of political opinions for [affected]"
     },
@@ -14,7 +14,7 @@
       "problem": "Online platforms are frequently targeted by malicious actors who want to steal users' personal data.",
       "solution": "AI-driven security filter that automatically removes information flagged as sensitive.",
       "benefitType": "security",
-      "benefitText": "Security of personal information increased by [number]%",
+      "benefitText": "[number]% increase in security of personal information.",
       "costType": "speech",
       "costText": "[number]% decrease in the accessibility of political opinions for [affected]"
     },
@@ -41,7 +41,7 @@
       "problem": "Operating news platforms is expensive, requiring significant investment in content moderation.",
       "solution": "Automatic fact-checking of online news.",
       "benefitType": "money",
-      "benefitText": "Reduce your monthly taxes by $[number]",
+      "benefitText": "$[number] yearly reduction in taxes",
       "costType": "press",
       "costText": "[number]% decrease in content accessibility from media outlets for [affected]"
     },
@@ -50,7 +50,7 @@
       "problem": "News articles on ongoing law enforcement operations can compromise the effectiveness of these operations.",
       "solution": "AI-driven screening system that prevents the release of articles mentioning ongoing law enforcement operations.",
       "benefitType": "security",
-      "benefitText": "Crime prevention improved by [number]%",
+      "benefitText": "[number]% improvement in crime prevention.",
       "costType": "press",
       "costText": "[number]% decrease in content accessibility from media outlets for [affected]"
     },
@@ -59,7 +59,7 @@
       "problem": "Courtroom scheduling and procedures are often inefficient, leading to long waits for hearings and trial delays.",
       "solution": "AI-powered scheduling system that optimizes court time usage by de-prioritizing certain cases.",
       "benefitType": "convenience",
-      "benefitText": "Court proceedings made [number]% faster",
+      "benefitText": "[number]% faster court proceedings.",
       "costType": "due_process",
       "costText": "[number]% decrease in time for presenting evidence for people with cases typically associated with [affected]"
     },
