@@ -57,7 +57,7 @@
     {
       "id": 7,
       "problem": "Courtroom scheduling and procedures are often inefficient, leading to long waits for hearings and trial delays.",
-      "solution": "AI-powered scheduling system that optimizes court time usagse by de-prioritizing certain cases.",
+      "solution": "AI-powered scheduling system that optimizes court time usage by de-prioritizing certain cases.",
       "benefitType": "convenience",
       "benefitText": "[number]% faster court proceedings",
       "costType": "due_process",
