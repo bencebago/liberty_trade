@@ -61,7 +61,7 @@
       "benefitType": "convenience",
       "benefitText": "[number]% faster court proceedings",
       "costType": "due_process",
-      "costText": "Around [number]% decreased time to present evidence in cases that typically affect [affected]"
+      "costText": "Around [number]% decreased time to present evidence "
     },
     {
       "id": 8,
@@ -70,7 +70,7 @@
       "benefitType": "money",
       "benefitText": "€[number] reduced yearly taxes",
       "costType": "due_process",
-      "costText": "Around [number]% decreased time to present evidence in cases that typically affect [affected]"
+      "costText": "Around [number]% decreased time to present evidence "
     },
     {
       "id": 9,
@@ -88,7 +88,7 @@
       "benefitType": "convenience",
       "benefitText": "[number]% faster processing of demonstration notifications", 
       "costType": "association",
-      "costText": "Around [number]% increased likelihood of demonstration restrictions when organized by [affected]"
+      "costText": "Around [number]% increased likelihood of demonstration restrictions "
     },
     {
       "id": 11,
@@ -97,7 +97,7 @@
       "benefitType": "money",
       "benefitText": "€[number] reduction in yearly taxes",
       "costType": "association",
-      "costText": "Around [number]% increased likelihood of demonstration restrictions when organized by [affected]"
+      "costText": "Around [number]% increased likelihood of demonstration restrictions "
     },
     {
       "id": 12,
@@ -106,7 +106,7 @@
       "benefitType": "security",
       "benefitText": "[number]% reduced threatening or violent events",
       "costType": "association",
-      "costText": "Around [number]% increased likelihood of demonstration restrictions when organized by [affected]"
+      "costText": "Around [number]% increased likelihood of demonstration restrictions "
     },
     {
       "id": 13,
