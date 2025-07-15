@@ -3,11 +3,11 @@
     {
       "id": 1,
       "problem": "Social media feeds often require costly moderation to reduce excessive divisive debates.",
-      "solution": "Automatic filtering of discussions for high conflict content.",
+      "solution": "AI-driven filtering of discussions for high conflict content.",
       "benefitType": "money",
       "benefitText": "€[number] payback for users",
       "costType": "speech",
-      "costText": "[number]% decreased accessibility of political opinions for [affected]"
+      "costText": "Around [number]% decreased accessibility of political opinions for [affected]"
     },
     {
       "id": 2,
@@ -16,34 +16,34 @@
       "benefitType": "security",
       "benefitText": "[number]% increased security of personal information",
       "costType": "speech",
-      "costText": "[number]% decreased accessibility of political opinions for [affected]"
+      "costText": "Around [number]% decreased accessibility of political opinions for [affected]"
     },
     {
       "id": 3,
       "problem": "Social media feeds often become overwhelming due to excessive divisive debates.",
-      "solution": "Automatic filtering of discussions for high conflict content.",
+      "solution": "AI-driven filtering of discussions for high conflict content.",
       "benefitType": "convenience",
       "benefitText": "[number]% increased user well-being",
       "costType": "speech",
-      "costText": "[number]% decreased accessibility of political opinions for [affected]"
+      "costText": "Around [number]% decreased accessibility of political opinions for [affected]"
     },
     {
       "id": 4,
       "problem": "There is a lot of false news circulating online, potentially misleading people.",
-      "solution": "Automatic fact-checking of online news.",
+      "solution": "AI-driven fact-checking of online news.",
       "benefitType": "convenience",
       "benefitText": "[number]% reduced false content exposure",
       "costType": "press",
-      "costText": "[number]% decreased content accessibility from media outlets for [affected]"
+      "costText": "Around [number]% decreased content accessibility from media outlets for [affected]"
     },
     {
       "id": 5,
       "problem": "Operating news platforms is expensive, requiring significant investment in content moderation.",
-      "solution": "Automatic fact-checking of online news.",
+      "solution": "AI-driven fact-checking of online news.",
       "benefitType": "money",
       "benefitText": "€[number] reduced yearly taxes",
       "costType": "press",
-      "costText": "[number]% decreased content accessibility from media outlets for [affected]"
+      "costText": "Around [number]% decreased content accessibility from media outlets for [affected]"
     },
     {
       "id": 6,
@@ -52,7 +52,7 @@
       "benefitType": "security",
       "benefitText": "[number]% improved crime prevention",
       "costType": "press",
-      "costText": "[number]% decreased content accessibility from media outlets for [affected]"
+      "costText": "Around [number]% decreased content accessibility from media outlets for [affected]"
     },
     {
       "id": 7,
@@ -61,7 +61,7 @@
       "benefitType": "convenience",
       "benefitText": "[number]% faster court proceedings",
       "costType": "due_process",
-      "costText": "[number]% decreased time to present evidence in cases that typically affect [affected]"
+      "costText": "Around [number]% decreased time to present evidence in cases that typically affect [affected]"
     },
     {
       "id": 8,
@@ -70,7 +70,7 @@
       "benefitType": "money",
       "benefitText": "€[number] reduced yearly taxes",
       "costType": "due_process",
-      "costText": "[number]% decreased time to present evidence in cases that typically affect [affected]"
+      "costText": "Around [number]% decreased time to present evidence in cases that typically affect [affected]"
     },
     {
       "id": 9,
@@ -79,7 +79,7 @@
       "benefitType": "security",
       "benefitText": "[number]% reduced crime due to increased law enforcement",
       "costType": "due_process",
-      "costText": "[number]% decreased time to present evidence in cases that typically affect [affected]"
+      "costText": "Around [number]% decreased time to present evidence in cases that typically affect [affected]"
     },
     {
       "id": 10,
@@ -88,7 +88,7 @@
       "benefitType": "convenience",
       "benefitText": "[number]% faster processing of demonstration notifications", 
       "costType": "association",
-      "costText": "[number]% increased likelihood of demonstration restrictions when organized by [affected]"
+      "costText": "Around [number]% increased likelihood of demonstration restrictions when organized by [affected]"
     },
     {
       "id": 11,
@@ -97,16 +97,16 @@
       "benefitType": "money",
       "benefitText": "€[number] reduction in yearly taxes",
       "costType": "association",
-      "costText": "[number]% increased likelihood of demonstration restrictions when organized by [affected]"
+      "costText": "Around [number]% increased likelihood of demonstration restrictions when organized by [affected]"
     },
     {
       "id": 12,
       "problem": "Large group events can escalate and become threatening or violent, affecting surrounding area safety.",
-      "solution": "Automatic approval or rejection system for protests and large events.",
+      "solution": "AI system that automatically assesses demonstration notifications and suggests conditions or restrictions.",
       "benefitType": "security",
       "benefitText": "[number]% reduced threatening or violent events",
       "costType": "association",
-      "costText": "[number]% increased likelihood of demonstration restrictions when organized by [affected]"
+      "costText": "Around [number]% increased likelihood of demonstration restrictions when organized by [affected]"
     },
     {
       "id": 13,
@@ -115,7 +115,7 @@
       "benefitType": "convenience",
       "benefitText": "[number]% faster and more efficient government services", 
       "costType": "equality",
-      "costText": "[number]% decreased consideration for applicants typically associated with [affected]"
+      "costText": "Around [number]% decreased consideration for applicants typically associated with [affected]"
     },
     {
       "id": 14,
@@ -124,7 +124,7 @@
       "benefitType": "money",
       "benefitText": "€[number] reduced yearly taxes",
       "costType": "equality",
-      "costText": "[number]% decreased consideration for applicants typically associated with [affected]"
+      "costText": "Around [number]% decreased consideration for applicants typically associated with [affected]"
     },
     {
       "id": 15,
@@ -133,7 +133,7 @@
       "benefitType": "security",
       "benefitText": "[number]% improved personal data security",
       "costType": "equality",
-      "costText": "[number]% decreased consideration for applicants typically associated with [affected]"
+      "costText": "Around [number]% decreased consideration for applicants typically associated with [affected]"
     },
     {
       "id": 16,
@@ -142,7 +142,7 @@
       "benefitType": "convenience",
       "benefitText": "[number]% easier and faster applications",
       "costType": "privacy",
-      "costText": "[number]% increased access to private information during the application process for [affected]"
+      "costText": "Around [number]% increased access to private information during the application process for [affected]"
     },
     {
       "id": 17,
@@ -151,7 +151,7 @@
       "benefitType": "money",
       "benefitText": "€[number] reduced yearly taxes",
       "costType": "privacy",
-      "costText": "[number]% increased access to private information during the application process for [affected]"
+      "costText": "Around [number]% increased access to private information during the application process for [affected]"
     },
     {
       "id": 18,
@@ -160,7 +160,7 @@
       "benefitType": "security",
       "benefitText": "[number]% improved public safety",
       "costType": "privacy",
-      "costText": "[number]% increased access to private information based on public movements for [affected]"
+      "costText": "Around [number]% increased access to private information based on public movements for [affected]"
     }
   ]
 }
