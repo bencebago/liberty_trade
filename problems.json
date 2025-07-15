@@ -88,16 +88,16 @@
       "benefitType": "convenience",
       "benefitText": "[number]% faster processing of demonstration notifications", 
       "costType": "association",
-      "costText": "Demonstrations are [number]% more likely to face restrictions when organized by [affected]"
+      "costText": "[number]% increased likelihood of demonstration restrictions when organized by [affected]"
     },
     {
       "id": 11,
-      "problem": "Municipal assessment of demonstration notifications and coordinating safety measures creates significant administrative costs.",
+      "problem": "Municipal assessment of demonstration notifications creates significant administrative costs to coordinate safety measures .",
       "solution": "AI system that automatically assesses demonstration notifications and suggests conditions or restrictions.",
       "benefitType": "money",
       "benefitText": "€[number] reduction in yearly taxes",
       "costType": "association",
-      "costText": "Demonstrations are [number]% more likely to face restrictions when organized by [affected]"
+      "costText": "[number]% increased likelihood of demonstration restrictions when organized by [affected]"
     },
     {
       "id": 12,
@@ -106,7 +106,7 @@
       "benefitType": "security",
       "benefitText": "[number]% reduced threatening or violent events",
       "costType": "association",
-      "costText": "[number]% decreased likelihood of event approval when organized by [affected]"
+      "costText": "[number]% increased likelihood of demonstration restrictions when organized by [affected]"
     },
     {
       "id": 13,
