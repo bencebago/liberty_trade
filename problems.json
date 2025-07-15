@@ -5,7 +5,7 @@
       "problem": "Social media feeds often require costly moderation to reduce excessive divisive debates.",
       "solution": "Automatic filtering of discussions for high conflict content.",
       "benefitType": "money",
-      "benefitText": "$[number] payback for users",
+      "benefitText": "€[number] payback for users",
       "costType": "speech",
       "costText": "[number]% decreased accessibility of political opinions for [affected]"
     },
@@ -41,7 +41,7 @@
       "problem": "Operating news platforms is expensive, requiring significant investment in content moderation.",
       "solution": "Automatic fact-checking of online news.",
       "benefitType": "money",
-      "benefitText": "$[number] reduced yearly taxes",
+      "benefitText": "€[number] reduced yearly taxes",
       "costType": "press",
       "costText": "[number]% decreased content accessibility from media outlets for [affected]"
     },
@@ -68,7 +68,7 @@
       "problem": "Courtroom services require significant government funding that could be directed elsewhere.",
       "solution": "AI-powered scheduling system that optimizes court time usage by de-prioritizing certain cases.",
       "benefitType": "money",
-      "benefitText": "$[number] reduced yearly taxes",
+      "benefitText": "€[number] reduced yearly taxes",
       "costType": "due_process",
       "costText": "[number]% decreased time to present evidence in cases that typically affect [affected]"
     },
@@ -83,21 +83,21 @@
     },
     {
       "id": 10,
-      "problem": "Large public meetings and protests require submitting time-consuming applications to police.",
-      "solution": "Automatic approval or rejection system for protests and large events.",
+      "problem": "Municipal assessment of demonstration notifications requires significant time and resources to evaluate safety and logistics.",
+      "solution": "AI system that automatically assesses demonstration notifications and suggests conditions or restrictions.",
       "benefitType": "convenience",
-      "benefitText": "[number]% faster and easier event approval", 
+      "benefitText": "[number]% faster processing of demonstration notifications", 
       "costType": "association",
-      "costText": "[number]% decreased likelihood of event approval when organized by [affected]"
+      "costText": "Demonstrations are [number]% more likely to face restrictions when organized by [affected]"
     },
     {
       "id": 11,
-      "problem": "Processing applications for large public meetings and protests is costly for the government.",
-      "solution": "Automatic approval or rejection system for protests and large events.",
+      "problem": "Municipal assessment of demonstration notifications and coordinating safety measures creates significant administrative costs.",
+      "solution": "AI system that automatically assesses demonstration notifications and suggests conditions or restrictions.",
       "benefitType": "money",
-      "benefitText": "$[number] reduced yearly taxes",
+      "benefitText": "€[number] reduction in yearly taxes",
       "costType": "association",
-      "costText": "[number]% decreased likelihood of event approval when organized by [affected]"
+      "costText": "Demonstrations are [number]% more likely to face restrictions when organized by [affected]"
     },
     {
       "id": 12,
@@ -122,7 +122,7 @@
       "problem": "Employee recruitment and training are expensive for government agencies, requiring significant investment.",
       "solution": "AI screening and ranking system to identify the most qualified applicants.",
       "benefitType": "money",
-      "benefitText": "$[number] reduced yearly taxes",
+      "benefitText": "€[number] reduced yearly taxes",
       "costType": "equality",
       "costText": "[number]% decreased consideration for applicants typically associated with [affected]"
     },
@@ -149,7 +149,7 @@
       "problem": "Government services require costly oversight and verification procedures.",
       "solution": "AI-powered system to predict applicant trustworthiness.",
       "benefitType": "money",
-      "benefitText": "$[number] reduced yearly taxes",
+      "benefitText": "€[number] reduced yearly taxes",
       "costType": "privacy",
       "costText": "[number]% increased access to private information during the application process for [affected]"
     },
