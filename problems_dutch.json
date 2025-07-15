@@ -1,0 +1,166 @@
+{
+  "problems": [
+    {
+      "id": 1,
+      "problem": "Social media feeds vereisen vaak dure moderatie om overdreven verdelende debatten te verminderen.",
+      "solution": "AI-gestuurde filtering van discussies voor content met hoog conflictgehalte.",
+      "benefitType": "money",
+      "benefitText": "€[number] terugbetaling voor gebruikers",
+      "costType": "speech",
+      "costText": "Ongeveer [number]% verminderde toegankelijkheid van politieke meningen voor [affected]"
+    },
+    {
+      "id": 2,
+      "problem": "Online platforms worden regelmatig aangevallen door kwaadwillende actoren die persoonlijke gegevens van gebruikers willen stelen.",
+      "solution": "AI-gestuurde beveiligingsfilter die automatisch informatie verwijdert die als gevoelig wordt gemarkeerd.",
+      "benefitType": "security",
+      "benefitText": "[number]% verhoogde beveiliging van persoonlijke informatie",
+      "costType": "speech",
+      "costText": "Ongeveer [number]% verminderde toegankelijkheid van politieke meningen voor [affected]"
+    },
+    {
+      "id": 3,
+      "problem": "Social media feeds worden vaak overweldigend door overdreven verdelende debatten.",
+      "solution": "AI-gestuurde filtering van discussies voor content met hoog conflictgehalte.",
+      "benefitType": "convenience",
+      "benefitText": "[number]% verhoogd gebruikerswelbevinden",
+      "costType": "speech",
+      "costText": "Ongeveer [number]% verminderde toegankelijkheid van politieke meningen voor [affected]"
+    },
+    {
+      "id": 4,
+      "problem": "Er circuleert veel nepnieuws online, wat mensen mogelijk misleidt.",
+      "solution": "AI-gestuurde factcheck van online nieuws.",
+      "benefitType": "convenience",
+      "benefitText": "[number]% verminderde blootstelling aan valse content",
+      "costType": "press",
+      "costText": "Ongeveer [number]% verminderde content toegankelijkheid van media-outlets voor [affected]"
+    },
+    {
+      "id": 5,
+      "problem": "Het beheren van nieuwsplatforms is duur en vereist aanzienlijke investeringen in content moderatie.",
+      "solution": "AI-gestuurde factcheck van online nieuws.",
+      "benefitType": "money",
+      "benefitText": "€[number] verminderde jaarlijkse belastingen",
+      "costType": "press",
+      "costText": "Ongeveer [number]% verminderde content toegankelijkheid van media-outlets voor [affected]"
+    },
+    {
+      "id": 6,
+      "problem": "Nieuwsartikelen over lopende wetshandhavingsoperaties kunnen de effectiviteit van de operatie in gevaar brengen.",
+      "solution": "AI-gestuurde screeningsysteem dat de publicatie van artikelen over lopende wetshandhavingsoperaties voorkomt.",
+      "benefitType": "security",
+      "benefitText": "[number]% verbeterde misdaadpreventie",
+      "costType": "press",
+      "costText": "Ongeveer [number]% verminderde content toegankelijkheid van media-outlets voor [affected]"
+    },
+    {
+      "id": 7,
+      "problem": "Rechtbankplanning en procedures zijn vaak inefficiënt, wat leidt tot lange wachttijden voor hoorzittingen en procesvertragingen.",
+      "solution": "AI-aangedreven planningssysteem dat het gebruik van rechtsbanktijd optimaliseert door bepaalde zaken te deprioriteren.",
+      "benefitType": "convenience",
+      "benefitText": "[number]% snellere rechtsprocedures",
+      "costType": "due_process",
+      "costText": "Ongeveer [number]% verminderde tijd om bewijs te presenteren"
+    },
+    {
+      "id": 8,
+      "problem": "Rechtbankdiensten vereisen aanzienlijke overheidsfinanciering die elders naartoe zou kunnen worden geleid.",
+      "solution": "AI-aangedreven planningssysteem dat het gebruik van rechtsbanktijd optimaliseert door bepaalde zaken te deprioriteren.",
+      "benefitType": "money",
+      "benefitText": "€[number] verminderde jaarlijkse belastingen",
+      "costType": "due_process",
+      "costText": "Ongeveer [number]% verminderde tijd om bewijs te presenteren"
+    },
+    {
+      "id": 9,
+      "problem": "Rechtbankdiensten vereisen aanzienlijke overheidsfinanciering die zou kunnen worden omgeleid naar wetshandhaving.",
+      "solution": "AI-aangedreven planningssysteem dat het gebruik van rechtsbanktijd optimaliseert door bepaalde zaken te deprioriteren.",
+      "benefitType": "security",
+      "benefitText": "[number]% verminderde criminaliteit door verhoogde wetshandhaving",
+      "costType": "due_process",
+      "costText": "Ongeveer [number]% verminderde tijd om bewijs te presenteren in zaken die typisch [affected] raken"
+    },
+    {
+      "id": 10,
+      "problem": "Gemeentelijke beoordeling van demonstratiemeldingen vereist aanzienlijke tijd en middelen om veiligheid en logistiek te evalueren.",
+      "solution": "AI-systeem dat automatisch demonstratiemeldingen beoordeelt en voorwaarden of beperkingen voorstelt.",
+      "benefitType": "convenience",
+      "benefitText": "[number]% snellere verwerking van demonstratiemeldingen",
+      "costType": "association",
+      "costText": "Ongeveer [number]% verhoogde kans op demonstratiebeperkingen"
+    },
+    {
+      "id": 11,
+      "problem": "Gemeentelijke beoordeling van demonstratiemeldingen creëert aanzienlijke administratieve kosten om veiligheidsmaatregelen te coördineren.",
+      "solution": "AI-systeem dat automatisch demonstratiemeldingen beoordeelt en voorwaarden of beperkingen voorstelt.",
+      "benefitType": "money",
+      "benefitText": "€[number] vermindering van jaarlijkse belastingen",
+      "costType": "association",
+      "costText": "Ongeveer [number]% verhoogde kans op demonstratiebeperkingen"
+    },
+    {
+      "id": 12,
+      "problem": "Grote groepsevenementen kunnen escaleren en bedreigend of gewelddadig worden, wat de veiligheid van het omliggende gebied beïnvloedt.",
+      "solution": "AI-systeem dat automatisch demonstratiemeldingen beoordeelt en voorwaarden of beperkingen voorstelt.",
+      "benefitType": "security",
+      "benefitText": "[number]% verminderde bedreigende of gewelddadige gebeurtenissen",
+      "costType": "association",
+      "costText": "Ongeveer [number]% verhoogde kans op demonstratiebeperkingen"
+    },
+    {
+      "id": 13,
+      "problem": "Aanstellingsbeslissingen voor overheidsinstanties kunnen traag en inefficiënt zijn, wat belangrijke diensten vertraagt.",
+      "solution": "AI-screening en rangschikkingssysteem om de meest gekwalificeerde sollicitanten te identificeren.",
+      "benefitType": "convenience",
+      "benefitText": "[number]% snellere en efficiëntere overheidsdiensten",
+      "costType": "equality",
+      "costText": "Ongeveer [number]% verminderde overweging voor sollicitanten die typisch geassocieerd worden met [affected]"
+    },
+    {
+      "id": 14,
+      "problem": "Werknemersrekrutering en training zijn duur voor overheidsinstanties en vereisen aanzienlijke investeringen.",
+      "solution": "AI-screening en rangschikkingssysteem om de meest gekwalificeerde sollicitanten te identificeren.",
+      "benefitType": "money",
+      "benefitText": "€[number] verminderde jaarlijkse belastingen",
+      "costType": "equality",
+      "costText": "Ongeveer [number]% verminderde overweging voor sollicitanten die typisch geassocieerd worden met [affected]"
+    },
+    {
+      "id": 15,
+      "problem": "Overheidsinstanties hanteren gevoelige persoonsgegevens, wat risico's creëert van gegevensdiefstal of lekken door werknemers.",
+      "solution": "AI-screening en rangschikkingssysteem om de meest betrouwbare sollicitanten te identificeren.",
+      "benefitType": "security",
+      "benefitText": "[number]% verbeterde beveiliging van persoonsgegevens",
+      "costType": "equality",
+      "costText": "Ongeveer [number]% verminderde overweging voor sollicitanten die typisch geassocieerd worden met [affected]"
+    },
+    {
+      "id": 16,
+      "problem": "Overheidsdiensten vereisen vaak gecompliceerde, tijdrovende administratie om fraude te voorkomen.",
+      "solution": "AI-aangedreven systeem om de betrouwbaarheid van sollicitanten te voorspellen.",
+      "benefitType": "convenience",
+      "benefitText": "[number]% eenvoudigere en snellere aanvragen",
+      "costType": "privacy",
+      "costText": "Ongeveer [number]% verhoogde toegang tot privé-informatie tijdens het aanvraagproces voor [affected]"
+    },
+    {
+      "id": 17,
+      "problem": "Overheidsdiensten vereisen kostbare toezicht- en verificatieprocedures.",
+      "solution": "AI-aangedreven systeem om de betrouwbaarheid van sollicitanten te voorspellen.",
+      "benefitType": "money",
+      "benefitText": "€[number] verminderde jaarlijkse belastingen",
+      "costType": "privacy",
+      "costText": "Ongeveer [number]% verhoogde toegang tot privé-informatie tijdens het aanvraagproces voor [affected]"
+    },
+    {
+      "id": 18,
+      "problem": "Overheden zijn vaak niet in staat om de hoeveelheid kleine criminaliteit en gevaarlijk gedrag in openbare ruimtes bij te houden.",
+      "solution": "AI-aangedreven systeem om individuele betrouwbaarheid te voorspellen op basis van openbaar gedrag.",
+      "benefitType": "security",
+      "benefitText": "[number]% verbeterde openbare veiligheid",
+      "costType": "privacy",
+      "costText": "Ongeveer [number]% verhoogde toegang tot privé-informatie gebaseerd op openbare bewegingen voor [affected]"
+    }
+  ]
+}
