@@ -2,8 +2,8 @@
   "problems": [
     {
       "id": 1,
-      "problem": "Social media websites moeten veel geld uitgeven om boze discussies tussen gebruikers te controleren.",
-      "solution": "AI systeem dat berichten vindt en weghaalt die voor ruzie zorgen.",
+      "problem": "Social media websites moeten veel geld uitgeven om agressieve discussies tussen gebruikers te controleren.",
+      "solution": "AI systeem dat berichten vindt en weghaalt die voor ruzie of agressie zorgen.",
       "benefitType": "money",
       "benefitText": "€[number] terugbetaling voor gebruikers",
       "costType": "speech",
@@ -11,7 +11,7 @@
     },
     {
       "id": 2,
-      "problem": "Slechte mensen proberen vaak websites aan te vallen om persoonlijke informatie van gebruikers te stelen.",
+      "problem": "Criminelen proberen vaak websites aan te vallen om persoonlijke informatie van gebruikers te stelen.",
       "solution": "AI beveiligingssysteem dat automatisch informatie weghaalt die gevaarlijk kan zijn om te delen.",
       "benefitType": "security",
       "benefitText": "[number]% betere bescherming van persoonlijke informatie",
@@ -20,70 +20,70 @@
     },
     {
       "id": 3,
-      "problem": "Social media wordt te stressvol door te veel boze discussies.",
-      "solution": "AI systeem dat berichten vindt en weghaalt die voor ruzie zorgen.",
+      "problem": "Social media wordt te stressvol door te veel agressieve discussies.",
+      "solution": "AI systeem dat berichten vindt en weghaalt die voor ruzie of agressie zorgen.",
       "benefitType": "convenience",
-      "benefitText": "[number]% beter gevoel voor gebruikers",
+      "benefitText": "[number]% betere ervaring voor gebruikers",
       "costType": "speech",
       "costText": "Ongeveer [number]% minder toegang tot politieke meningen voor [affected]"
     },
     {
       "id": 4,
       "problem": "Er is veel nepnieuws op internet dat mensen kan misleiden.",
-      "solution": "AI systeem dat controleert of online nieuws waar of vals is.",
+      "solution": "AI systeem dat controleert of online nieuws waar of niet waar is.",
       "benefitType": "convenience",
       "benefitText": "[number]% minder nepnieuws gezien door mensen",
       "costType": "press",
-      "costText": "Ongeveer [number]% minder toegang tot nieuwscontent voor [affected]"
+      "costText": "Ongeveer [number]% minder toegang tot nieuwsberichten voor [affected]"
     },
     {
       "id": 5,
-      "problem": "Nieuwswebsites runnen kost veel geld omdat ze mensen nodig hebben om content te controleren.",
-      "solution": "AI systeem dat controleert of online nieuws waar of vals is.",
+      "problem": "Nieuwswebsites beheren kost veel geld omdat er mensen nodig zijn om berichten te controleren.",
+      "solution": "AI systeem dat controleert of online nieuws waar of niet waar is.",
       "benefitType": "money",
       "benefitText": "€[number] minder belasting betaald per jaar",
       "costType": "press",
-      "costText": "Ongeveer [number]% minder toegang tot nieuwscontent voor [affected]"
+      "costText": "Ongeveer [number]% minder toegang tot nieuwsberichten voor [affected]"
     },
     {
       "id": 6,
-      "problem": "Nieuwsverhalen over politieoperaties kunnen het moeilijker maken voor politie om criminelen te vangen.",
-      "solution": "AI systeem dat nieuwsverhalen over politieoperaties stopt van gepubliceerd worden.",
+      "problem": "Nieuwsberichten over politieoperaties kunnen het moeilijker maken voor politie om criminelen op te sporen.",
+      "solution": "AI systeem dat nieuwsberichten over politieoperaties blokkeert zodat ze niet gepubliceerd worden.",
       "benefitType": "security",
-      "benefitText": "[number]% betere criminaliteitspreventie",
+      "benefitText": "[number]% betere opsporing van criminaliteit",
       "costType": "press",
-      "costText": "Ongeveer [number]% minder toegang tot nieuwscontent voor [affected]"
+      "costText": "Ongeveer [number]% minder toegang tot nieuwsberichten voor [affected]"
     },
     {
       "id": 7,
-      "problem": "Rechtbanken zijn slecht georganiseerd, dus mensen wachten te lang voordat hun zaken worden behandeld.",
+      "problem": "Rechtbanken hebben het te druk[FR2], dus mensen wachten te lang voordat hun zaken worden behandeld.",
       "solution": "AI systeem dat beslist welke rechtszaken belangrijker zijn dan andere.",
       "benefitType": "convenience",
-      "benefitText": "[number]% snellere rechtszaken",
+      "benefitText": "[number]% snellere afhandeling van belangrijke rechtszaken",
       "costType": "due_process",
-      "costText": "Ongeveer [number]% minder tijd om bewijs te tonen"
+      "costText": "Ongeveer [number]% minder kans om je recht te halen"
     },
     {
       "id": 8,
-      "problem": "Rechtbanken kosten de regering veel geld dat gebruikt kan worden voor andere dingen.",
+      "problem": "Rechtszaken kosten de overheid veel geld dat gebruikt kan worden voor andere dingen.",
       "solution": "AI systeem dat beslist welke rechtszaken belangrijker zijn dan andere.",
       "benefitType": "money",
       "benefitText": "€[number] minder belasting betaald per jaar",
       "costType": "due_process",
-      "costText": "Ongeveer [number]% minder tijd om bewijs te tonen"
+      "costText": "Ongeveer [number]% minder kans om je recht te halen"
     },
     {
       "id": 9,
-      "problem": "Rechtbanken kosten de regering geld dat gebruikt kan worden om meer politieagenten aan te nemen.",
+      "problem": "Rechtszaken kosten de regering geld dat gebruikt kan worden om meer politieagenten aan te nemen.",
       "solution": "AI systeem dat beslist welke rechtszaken belangrijker zijn dan andere.",
       "benefitType": "security",
       "benefitText": "[number]% minder criminaliteit door meer politieagenten",
       "costType": "due_process",
-      "costText": "Ongeveer [number]% minder tijd om bewijs te tonen in zaken die meestal [affected] beïnvloeden"
+      "costText": "Ongeveer [number]% minder kans om je recht te halen in zaken die meestal [affected] beïnvloeden"
     },
     {
       "id": 10,
-      "problem": "Stadswerknemers hebben veel tijd nodig om aanvragen voor demonstraties te controleren en te beslissen of ze veilig zijn.",
+      "problem": "Gemeentepersoneel heeft veel tijd nodig om aanvragen voor demonstraties te controleren en te beslissen of ze veilig zijn.",
       "solution": "AI systeem dat automatisch demonstratie-aanvragen controleert en regels of beperkingen voorstelt.",
       "benefitType": "convenience",
       "benefitText": "[number]% snellere verwerking van demonstratie-aanvragen",
@@ -92,7 +92,7 @@
     },
     {
       "id": 11,
-      "problem": "Demonstratie-aanvragen controleren kost de stad veel geld voor veiligheidsplanning.",
+      "problem": "Demonstratie-aanvragen controleren kost gemeentes veel geld voor veiligheidsplanning.",
       "solution": "AI systeem dat automatisch demonstratie-aanvragen controleert en regels of beperkingen voorstelt.",
       "benefitType": "money",
       "benefitText": "€[number] minder belasting betaald per jaar",
@@ -101,44 +101,44 @@
     },
     {
       "id": 12,
-      "problem": "Grote groepen mensen kunnen soms gevaarlijk worden en mensen in de buurt pijn doen.",
+      "problem": "Demonstraties kunnen uit de hand lopen en problemen veroorzaken voor veiligheid en openbare orde.",
       "solution": "AI systeem dat automatisch demonstratie-aanvragen controleert en regels of beperkingen voorstelt.",
       "benefitType": "security",
-      "benefitText": "[number]% minder gevaarlijke of gewelddadige gebeurtenissen",
+      "benefitText": "[number]% minder risico’s voor de veiligheid",
       "costType": "association",
       "costText": "Ongeveer [number]% meer kans dat demonstraties beperkingen krijgen"
     },
     {
       "id": 13,
-      "problem": "Overheidskantoren zijn te langzaam bij het aannemen van nieuwe werknemers, wat belangrijke diensten vertraagt.",
+      "problem": "Overheidsdiensten zijn te langzaam bij het aannemen van nieuwe werknemers, wat belangrijke hulp en diensten vertraagt.",
       "solution": "AI systeem dat de beste sollicitanten vindt en rangschikt.",
       "benefitType": "convenience",
       "benefitText": "[number]% snellere en betere overheidsdiensten",
       "costType": "equality",
-      "costText": "Ongeveer [number]% minder overweging voor sollicitanten meestal verbonden met [affected]"
+      "costText": "Ongeveer [number]% minder kans voor sollicitanten die verbonden zijn met [affected]"
     },
     {
       "id": 14,
-      "problem": "Nieuwe overheidswerknemers vinden en trainen kost veel geld.",
+      "problem": "Nieuw overheidspersoneel vinden en trainen kost veel geld.",
       "solution": "AI systeem dat de beste sollicitanten vindt en rangschikt.",
       "benefitType": "money",
       "benefitText": "€[number] minder belasting betaald per jaar",
       "costType": "equality",
-      "costText": "Ongeveer [number]% minder overweging voor sollicitanten meestal verbonden met [affected]"
+      "costText": "Ongeveer [number]% minder kans voor sollicitanten die verbonden zijn met [affected]"
     },
     {
       "id": 15,
-      "problem": "Overheidswerknemers hebben toegang tot privé-informatie, dus er is risico op gegevensdiefstal door slechte werknemers.",
+      "problem": "Overheidspersoneel heeft steeds meer toegang tot privé-informatie, dus er is risico op diefstal van gegevens door werknemers met slechte bedoelingen.",
       "solution": "AI systeem dat de meest betrouwbare sollicitanten vindt en rangschikt.",
       "benefitType": "security",
       "benefitText": "[number]% betere bescherming van persoonlijke gegevens",
       "costType": "equality",
-      "costText": "Ongeveer [number]% minder overweging voor sollicitanten meestal verbonden met [affected]"
+      "costText": "Ongeveer [number]% minder kans voor sollicitanten die verbonden zijn met [affected]"
     },
     {
       "id": 16,
-      "problem": "Overheidsaanvragen hebben veel moeilijke paperassen nodig om bedrog te voorkomen.",
-      "solution": "AI systeem dat voorspelt of sollicitanten vertrouwd kunnen worden.",
+      "problem": "Overheidsdiensten laten mensen veel moeilijke formulieren invullen om te voorkomen dat mensen liegen wanneer ze aanvragen doen voor uitkeringen of diensten.",
+      "solution": "AI systeem dat formulieren makkelijker maakt door te voorspellen of aanvragers vertrouwd kunnen worden.",
       "benefitType": "convenience",
       "benefitText": "[number]% makkelijkere en snellere aanvragen",
       "costType": "privacy",
@@ -146,16 +146,17 @@
     },
     {
       "id": 17,
-      "problem": "Overheidsdiensten hebben dure controlesystemen nodig om ervoor te zorgen dat mensen niet bedriegen.",
-      "solution": "AI systeem dat voorspelt of sollicitanten vertrouwd kunnen worden.",
+      "problem": "Overheidsdiensten moeten veel mensen betalen om te controleren of aanvragers eerlijk zijn wanneer ze aanvragen doen voor uitkeringen of diensten, wat veel geld kost.",
+      "solution": "AI systeem dat dure controles vervangt door te voorspellen of sollicitanten vertrouwd kunnen worden.",
       "benefitType": "money",
       "benefitText": "€[number] minder belasting betaald per jaar",
       "costType": "privacy",
       "costText": "Ongeveer [number]% meer toegang tot privé-informatie tijdens aanvragen voor [affected]"
     },
+
     {
       "id": 18,
-      "problem": "Regeringen kunnen niet alle kleine misdaden en gevaarlijk gedrag in openbare plaatsen in de gaten houden.",
+      "problem": "Overheden kunnen niet alle kleine misdaden en risico’s in openbare plaatsen controleren.",
       "solution": "AI systeem dat voorspelt of mensen vertrouwd kunnen worden gebaseerd op hoe ze zich gedragen in het openbaar.",
       "benefitType": "security",
       "benefitText": "[number]% betere openbare veiligheid",
