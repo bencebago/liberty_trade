@@ -56,7 +56,7 @@
     },
     {
       "id": 7,
-      "problem": "Rechtbanken hebben het te druk[FR2], dus mensen wachten te lang voordat hun zaken worden behandeld.",
+      "problem": "Rechtbanken hebben het te druk, dus mensen wachten te lang voordat hun zaken worden behandeld.",
       "solution": "AI systeem dat beslist welke rechtszaken belangrijker zijn dan andere.",
       "benefitType": "convenience",
       "benefitText": "[number]% snellere afhandeling van belangrijke rechtszaken",
