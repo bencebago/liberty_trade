@@ -135,9 +135,9 @@
       "costType": "equality",
       "costText": "Ongeveer [number]% minder kans voor sollicitanten die verbonden zijn met [affected]"
     },
-    {
+     {
       "id": 16,
-      "problem": "Overheidsdiensten laten mensen veel moeilijke formulieren invullen om te voorkomen dat mensen liegen wanneer ze aanvragen doen voor uitkeringen of diensten.",
+      "problem": "Overheidsdiensten laten mensen veel ingewikkelde formulieren invullen om te voorkomen dat mensen liegen wanneer ze een aanvraag doen voor een uitkering of dienst.",
       "solution": "AI systeem dat formulieren makkelijker maakt door te voorspellen of aanvragers vertrouwd kunnen worden.",
       "benefitType": "convenience",
       "benefitText": "[number]% makkelijkere en snellere aanvragen",
@@ -146,14 +146,13 @@
     },
     {
       "id": 17,
-      "problem": "Overheidsdiensten moeten veel mensen betalen om te controleren of aanvragers eerlijk zijn wanneer ze aanvragen doen voor uitkeringen of diensten, wat veel geld kost.",
-      "solution": "AI systeem dat dure controles vervangt door te voorspellen of sollicitanten vertrouwd kunnen worden.",
+      "problem": "Overheidsdiensten geven veel uit aan controles om te zorgen dat mensen eerlijk zijn bij hun aanvraag van een uitkering of dienst.",
+      "solution": "AI systeem dat dure controles vervangt door te voorspellen of aanvragers vertrouwd kunnen worden.",
       "benefitType": "money",
       "benefitText": "€[number] minder belasting betaald per jaar",
       "costType": "privacy",
       "costText": "Ongeveer [number]% meer toegang tot privé-informatie tijdens aanvragen voor [affected]"
     },
-
     {
       "id": 18,
       "problem": "Overheden kunnen niet alle kleine misdaden en risico’s in openbare plaatsen controleren.",
