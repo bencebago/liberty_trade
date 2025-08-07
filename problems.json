@@ -138,24 +138,24 @@
     {
       "id": 16,
       "problem": "Municipal workers need to spend time to check applications for benefits and decide if they are deserved, instead of working on other, more complex matters",
-      "solution": "AI system that decides on benefits automatically.",
+      "solution": "AI system that checks applicant trustworthiness and decides on benefits automatically.",
       "benefitType": "convenience",
       "benefitText": "[number]% faster and better municipalityt services",
       "costType": "privacy",
-      "costText": "Around [number]% more access to personal information during applications for [affected]"
+      "costText": "Around [number]% more access to personal information during applications from [affected]"
     },
     {
       "id": 17,
-      "problem": "Government services need to pay many people to check if applicants are honest when they apply for benefits or services, which costs a lot of money.",
-      "solution": "AI system that replaces expensive checking by predicting if applicants can be trusted.",
+      "problem": "Municipal services need to pay many people to check if applicants are honest when they apply for benefits or services, which costs a lot of money.",
+      "solution": "AI system that checks applicant trustworthiness and decides on benefits automatically.",
       "benefitType": "money",
       "benefitText": "€[number] less taxes paid each year",
       "costType": "privacy",
-      "costText": "Around [number]% more access to personal information during applications for [affected]"
+      "costText": "Around [number]% more access to personal information during applications from [affected]"
     },
     {
       "id": 18,
-      "problem": "Governments cannot control all the small crimes and risks in public places.",
+      "problem": "Municipality cannot prevent all the small crimes and risks in public places.",
       "solution": "AI system that predicts if people can be trusted based on how they act in public.",
       "benefitType": "security",
       "benefitText": "[number]% better public safety",
