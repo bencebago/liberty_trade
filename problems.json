@@ -2,12 +2,12 @@
   "problems": [
     {
       "id": 1,
-      "problem": "Social media websites need to spend a lot of money to control aggressive arguments between users.",
-      "solution": "AI system that finds and removes posts that cause fights or aggression.",
+      "problem": "Social media websites need to spend a lot of money to moderate aggressive arguments between users.",
+      "solution": "Use AI system that finds and removes posts that cause fights or aggression.",
       "benefitType": "money",
-      "benefitText": "€[number] payback for users",
+      "benefitText": "€[number] reimbursment of platform fees each year",
       "costType": "speech",
-      "costText": "Around [number]% less access to political opinions for [affected]"
+      "costText": "Around [number]% less access to political opinions from [affected]"
     },
     {
       "id": 2,
@@ -20,7 +20,7 @@
     },
     {
       "id": 3,
-      "problem": "Social media becomes too stressful because of too many aggressive arguments.",
+      "problem": "Social media becomes stressful because of too many aggressive arguments.",
       "solution": "AI system that finds and removes posts that cause fights or aggression.",
       "benefitType": "convenience",
       "benefitText": "[number]% better experience for users",
@@ -29,7 +29,7 @@
     },
     {
       "id": 4,
-      "problem": "There is a lot of fake news on the internet that can trick people.",
+      "problem": "There is a lot of fake news on the internet that can mislead people.",
       "solution": "AI system that checks if online news is true or false.",
       "benefitType": "convenience",
       "benefitText": "[number]% less fake news seen by people",
@@ -38,10 +38,10 @@
     },
     {
       "id": 5,
-      "problem": "Managing news websites costs a lot of money because people are needed to check content.",
+      "problem": "Managing news websites costs a lot of money because moderators are needed to check content for truthfulness.",
       "solution": "AI system that checks if online news is true or false.",
       "benefitType": "money",
-      "benefitText": "€[number] less taxes paid each year",
+      "benefitText": "€[number] reimbursment of platform fees each year",
       "costType": "press",
       "costText": "Around [number]% less access to news content for [affected]"
     },
@@ -56,7 +56,7 @@
     },
     {
       "id": 7,
-      "problem": "Courts are too busy, so people wait too long before their cases are heard.",
+      "problem": "Courts are too busy, so people have to wait too long before their cases are heard.",
       "solution": "AI system that decides which court cases are more important than others.",
       "benefitType": "convenience",
       "benefitText": "[number]% faster handling of important court cases",
@@ -65,7 +65,7 @@
     },
     {
       "id": 8,
-      "problem": "Court cases cost the government a lot of money that could be used for other things.",
+      "problem": "Handling court cases costs the government money that could be saved for taxpayers.",
       "solution": "AI system that decides which court cases are more important than others.",
       "benefitType": "money",
       "benefitText": "€[number] less taxes paid each year",
@@ -74,7 +74,7 @@
     },
     {
       "id": 9,
-      "problem": "Court cases cost the government money that could be used to hire more police officers.",
+      "problem": "Handling court cases costs the government money that could be used to hire more police officers.",
       "solution": "AI system that decides which court cases are more important than others.",
       "benefitType": "security",
       "benefitText": "[number]% less crime because of more police officers",
@@ -83,16 +83,16 @@
     },
     {
       "id": 10,
-      "problem": "Municipal workers need a lot of time to check applications for protests and decide if they are safe.",
+      "problem": "Municipal workers need to spend time to check applications for protests and decide if they are safe, instead of working on other, more complex matters.",
       "solution": "AI system that automatically checks protest applications and suggests rules or limits.",
       "benefitType": "convenience",
-      "benefitText": "[number]% faster processing of protest applications",
+      "benefitText": "[number]% faster and more efficient municipial services",
       "costType": "association",
       "costText": "Around [number]% more likely that protests will have restrictions"
     },
     {
       "id": 11,
-      "problem": "Checking protest applications costs municipalities a lot of money for safety planning.",
+      "problem": "Municipal worker hours cost a lot of money to the taxpayers. One of their (relatively easy) task is to check protest notifications.",
       "solution": "AI system that automatically checks protest applications and suggests rules or limits.",
       "benefitType": "money",
       "benefitText": "€[number] less taxes paid each year",
@@ -110,16 +110,16 @@
     },
     {
       "id": 13,
-      "problem": "Government services are too slow when hiring new workers, which delays important help and services.",
+      "problem": "Municipality services are too slow when hiring new workers, which delays important help and services.",
       "solution": "AI system that finds and ranks the best job applicants.",
       "benefitType": "convenience",
-      "benefitText": "[number]% faster and better government services",
+      "benefitText": "[number]% faster and better municipalityt services",
       "costType": "equality",
       "costText": "Around [number]% less chance for applicants who are connected with [affected]"
     },
     {
       "id": 14,
-      "problem": "Finding and training new government workers costs a lot of money.",
+      "problem": "Finding and training new government workers costs taxpayers a lot of money.",
       "solution": "AI system that finds and ranks the best job applicants.",
       "benefitType": "money",
       "benefitText": "€[number] less taxes paid each year",
@@ -128,7 +128,7 @@
     },
     {
       "id": 15,
-      "problem": "Government workers have increasing access to private information, so there is risk of data theft by employees with bad intentions.",
+      "problem": "Municipality workers have increasing access to personal information, so there is a risk of data theft by employees with bad intentions.",
       "solution": "AI system that finds and ranks the most trustworthy job applicants.",
       "benefitType": "security",
       "benefitText": "[number]% better protection of personal data",
@@ -137,12 +137,12 @@
     },
     {
       "id": 16,
-      "problem": "Government services make people fill out a lot of difficult forms to prevent people from lying when they apply for benefits or services.",
-      "solution": "AI system that makes forms simpler by predicting if applicants can be trusted.",
+      "problem": "Municipal workers need to spend time to check applications for benefits and decide if they are deserved, instead of working on other, more complex matters",
+      "solution": "AI system that decides on benefits automatically.",
       "benefitType": "convenience",
-      "benefitText": "[number]% easier and faster applications",
+      "benefitText": "[number]% faster and better municipalityt services",
       "costType": "privacy",
-      "costText": "Around [number]% more access to private information during applications for [affected]"
+      "costText": "Around [number]% more access to personal information during applications for [affected]"
     },
     {
       "id": 17,
@@ -151,7 +151,7 @@
       "benefitType": "money",
       "benefitText": "€[number] less taxes paid each year",
       "costType": "privacy",
-      "costText": "Around [number]% more access to private information during applications for [affected]"
+      "costText": "Around [number]% more access to personal information during applications for [affected]"
     },
     {
       "id": 18,
@@ -160,7 +160,7 @@
       "benefitType": "security",
       "benefitText": "[number]% better public safety",
       "costType": "privacy",
-      "costText": "Around [number]% more access to private information based on public movements for [affected]"
+      "costText": "Around [number]% more access to personal information based on public movements for [affected]"
     }
   ]
 }
