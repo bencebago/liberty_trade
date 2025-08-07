@@ -61,7 +61,7 @@
       "benefitType": "convenience",
       "benefitText": "[number]% faster handling of important court cases",
       "costType": "due_process",
-      "costText": "Around [number]% less chance to get justice"
+      "costText": "Around [number]% less chance to get justice in cases that usually affect [affected]"
     },
     {
       "id": 8,
@@ -70,7 +70,7 @@
       "benefitType": "money",
       "benefitText": "€[number] less taxes paid each year",
       "costType": "due_process",
-      "costText": "Around [number]% less chance to get justice"
+      "costText": "Around [number]% less chance to get justice in cases that usually affect [affected]"
     },
     {
       "id": 9,
