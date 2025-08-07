@@ -5,7 +5,7 @@
       "problem": "Social media websites need to spend a lot of money to moderate aggressive arguments between users.",
       "solution": "Use AI system that finds and removes posts that cause fights or aggression.",
       "benefitType": "money",
-      "benefitText": "€[number] reimbursment of platform fees each year",
+      "benefitText": "€[number] lower yearly fees for using the platform",
       "costType": "speech",
       "costText": "Around [number]% less access to political opinions from [affected]"
     },
@@ -41,7 +41,7 @@
       "problem": "Managing news websites costs a lot of money because moderators are needed to check content for truthfulness.",
       "solution": "AI system that checks if online news is true or false.",
       "benefitType": "money",
-      "benefitText": "€[number] reimbursment of platform fees each year",
+      "benefitText": "€[number] lower yearly fees for using the platform",
       "costType": "press",
       "costText": "Around [number]% less access to news content for [affected]"
     },
@@ -65,7 +65,7 @@
     },
     {
       "id": 8,
-      "problem": "Handling court cases costs the government money that could be saved for taxpayers.",
+      "problem": "Handling court cases costs the government a lot of money.",
       "solution": "AI system that decides which court cases are more important than others.",
       "benefitType": "money",
       "benefitText": "€[number] less taxes paid each year",
@@ -74,25 +74,25 @@
     },
     {
       "id": 9,
-      "problem": "Handling court cases costs the government money that could be used to hire more police officers.",
+      "problem": "Handling court cases costs the government a lot of money.",
       "solution": "AI system that decides which court cases are more important than others.",
       "benefitType": "security",
-      "benefitText": "[number]% less crime because of more police officers",
+      "benefitText": "[number]% less crime because the government can spend more on hiring police officers",
       "costType": "due_process",
       "costText": "Around [number]% less chance to get justice in cases that usually affect [affected]"
     },
     {
       "id": 10,
-      "problem": "Municipal workers need to spend time to check applications for protests and decide if they are safe, instead of working on other, more complex matters.",
+      "problem": "Municipalities need a lot of time to process notifications for demonstrations and decide how they can be held safely.",
       "solution": "AI system that automatically checks protest applications and suggests rules or limits.",
       "benefitType": "convenience",
-      "benefitText": "[number]% faster and more efficient municipial services",
+      "benefitText": "[number]% faster and more efficient municipal services for other tasks",
       "costType": "association",
       "costText": "Around [number]% more likely that protests will have restrictions"
     },
     {
       "id": 11,
-      "problem": "Municipal worker hours cost a lot of money to the taxpayers. One of their (relatively easy) task is to check protest notifications.",
+      "problem": "Municipalities need to spend a lot of money to process notifications for demonstrations and decide how they can be held safely.",
       "solution": "AI system that automatically checks protest applications and suggests rules or limits.",
       "benefitType": "money",
       "benefitText": "€[number] less taxes paid each year",
@@ -104,7 +104,7 @@
       "problem": "Protests can get out of hand and cause problems for safety and public order.",
       "solution": "AI system that automatically checks protest applications and suggests rules or limits.",
       "benefitType": "security",
-      "benefitText": "[number]% fewer safety risks",
+      "benefitText": "[number]% fewer public safety risks",
       "costType": "association",
       "costText": "Around [number]% more likely that protests will have restrictions"
     },
@@ -119,7 +119,7 @@
     },
     {
       "id": 14,
-      "problem": "Finding and training new government workers costs taxpayers a lot of money.",
+      "problem": "Finding and training new municipality workers costs a lot of money.",
       "solution": "AI system that finds and ranks the best job applicants.",
       "benefitType": "money",
       "benefitText": "€[number] less taxes paid each year",
@@ -137,12 +137,13 @@
     },
     {
       "id": 16,
-      "problem": "Municipal workers need to spend time to check applications for benefits and decide if they are deserved, instead of working on other, more complex matters",
+       "problem": "Municipal workers need to spend a lot of time to check applications for benefits and decide if the information is truthful.",
       "solution": "AI system that checks applicant trustworthiness and decides on benefits automatically.",
       "benefitType": "convenience",
       "benefitText": "[number]% faster and better municipalityt services",
       "costType": "privacy",
-      "costText": "Around [number]% more access to personal information during applications from [affected]"
+      "costText": "Around [number]% more access to personal information from [affected]"
+
     },
     {
       "id": 17,
@@ -151,12 +152,12 @@
       "benefitType": "money",
       "benefitText": "€[number] less taxes paid each year",
       "costType": "privacy",
-      "costText": "Around [number]% more access to personal information during applications from [affected]"
+      "costText": "Around [number]% more access to personal information from [affected]"
     },
     {
       "id": 18,
-      "problem": "Municipality cannot prevent all the small crimes and risks in public places.",
-      "solution": "AI system that predicts if people can be trusted based on how they act in public.",
+      "problem": "Municipality cannot prevent crime in public places.",
+      "solution": "AI system that predicts criminal intentions to decide how police is best used.",
       "benefitType": "security",
       "benefitText": "[number]% better public safety",
       "costType": "privacy",
