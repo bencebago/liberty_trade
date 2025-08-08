@@ -3,7 +3,7 @@
     {
       "id": 1,
       "problem": "Social media websites need to spend a lot of money to moderate aggressive arguments between users.",
-      "solution": "Use AI system that finds and removes posts that cause fights or aggression.",
+      "solution": "AI system that finds and removes posts that cause fights or aggression.",
       "benefitType": "money",
       "benefitText": "€[number] lower yearly fees for using the platform",
       "costType": "speech",
@@ -87,7 +87,7 @@
       "solution": "AI system that automatically checks protest applications and suggests rules or limits.",
       "benefitType": "convenience",
       "benefitText": "[number]% faster and more efficient municipal services for other tasks",
-      "costType": "association",
+      "costType": "assembly",
       "costText": "Around [number]% more likely that protests will have restrictions"
     },
     {
@@ -96,7 +96,7 @@
       "solution": "AI system that automatically checks protest applications and suggests rules or limits.",
       "benefitType": "money",
       "benefitText": "€[number] less taxes paid each year",
-      "costType": "association",
+      "costType": "assembly",
       "costText": "Around [number]% more likely that protests will have restrictions"
     },
     {
@@ -105,7 +105,7 @@
       "solution": "AI system that automatically checks protest applications and suggests rules or limits.",
       "benefitType": "security",
       "benefitText": "[number]% fewer public safety risks",
-      "costType": "association",
+      "costType": "assembly",
       "costText": "Around [number]% more likely that protests will have restrictions"
     },
     {
