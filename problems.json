@@ -11,10 +11,10 @@
     },
     {
       "id": 2,
-      "problem": "Criminals often try to attack websites to steal users' personal information.",
+      "problem": "Dangerous extremist groups often use social media to call for violence.",
       "solution": "AI security system that automatically removes information that might be dangerous to share.",
       "benefitType": "security",
-      "benefitText": "[number]% better protection of personal information",
+      "benefitText": "[number]% fewer public safety risks",
       "costType": "speech",
       "costText": "Around [number]% less access to political opinions for [affected]"
     },
@@ -128,10 +128,10 @@
     },
     {
       "id": 15,
-      "problem": "Municipality workers have increasing access to personal information, so there is a risk of data theft by employees with bad intentions.",
+      "problem": "Municipality workers have access to sensitive information that could threaten public safety if leaked to criminals.”,
       "solution": "AI system that finds and ranks the most trustworthy job applicants.",
       "benefitType": "security",
-      "benefitText": "[number]% better protection of personal data",
+      "benefitText": "[number]% fewer public safety risks",
       "costType": "equality",
       "costText": "Around [number]% less chance for applicants who are connected with [affected]"
     },
