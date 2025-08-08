@@ -138,7 +138,7 @@
     {
       "id": 16,
        "problem": "Municipal workers need to spend a lot of time to check applications for benefits and decide if the information is truthful.",
-      "solution": "AI system that surveils public movements, and checks applicant trustworthiness.",
+      "solution": "AI system that watches public movements, and checks applicant trustworthiness.",
       "benefitType": "convenience",
       "benefitText": "[number]% faster and better municipalityt services",
       "costType": "privacy",
@@ -148,7 +148,7 @@
     {
       "id": 17,
       "problem": "Municipal services need to pay many people to check if applicants are honest when they apply for benefits or services, which costs a lot of money.",
-      "solution": "AI system that surveils public movements, and checks applicant trustworthiness.",
+      "solution": "AI system that watches public movements, and checks applicant trustworthiness.",
       "benefitType": "money",
       "benefitText": "€[number] less taxes paid each year",
       "costType": "privacy",
@@ -156,8 +156,8 @@
     },
     {
       "id": 18,
-      "problem": "Municipality cannot prevent crime in public places.",
-      "solution": "AI system that surveils public movements and predicts criminal intentions to decide how police is best used.",
+      "problem": "There is a lot of crime in public spaces because police officers are not placed efficiently.",
+      "solution": "AI system that watches public movements and predicts criminal intentions to decide how police is best used.",
       "benefitType": "security",
       "benefitText": "[number]% better public safety",
       "costType": "privacy",
