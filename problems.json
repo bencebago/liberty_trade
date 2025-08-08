@@ -113,7 +113,7 @@
       "problem": "Municipality services are too slow when hiring new workers, which delays important help and services.",
       "solution": "AI system that finds and ranks the best job applicants.",
       "benefitType": "convenience",
-      "benefitText": "[number]% faster and better municipalityt services",
+      "benefitText": "[number]% faster and better municipality services",
       "costType": "equality",
       "costText": "Around [number]% less chance for applicants who are connected with [affected]"
     },
