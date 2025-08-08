@@ -9,7 +9,7 @@
       "costType": "speech",
       "costText": "Around [number]% less access to political opinions from [affected]"
     },
-    {
+     {
       "id": 2,
       "problem": "Dangerous extremist groups often use social media to call for violence.",
       "solution": "AI security system that automatically removes information that might be dangerous to share.",
