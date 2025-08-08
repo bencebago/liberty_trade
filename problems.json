@@ -128,7 +128,7 @@
     },
     {
       "id": 15,
-      "problem": "Municipality workers have access to sensitive information that could threaten public safety if leaked to criminals.”,
+      "problem": "Municipality workers have access to sensitive information that could threaten public safety if leaked to criminals.",
       "solution": "AI system that finds and ranks the most trustworthy job applicants.",
       "benefitType": "security",
       "benefitText": "[number]% fewer public safety risks",
