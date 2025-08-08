@@ -156,7 +156,7 @@
     },
     {
       "id": 18,
-      "problem": "There is a lot of crime in public spaces because police officers are not placed efficiently.",
+      "problem": "Municipal services cannot prevent most crimes in public spaces because police officers are not placed efficiently.",
       "solution": "AI system that watches public movements and predicts criminal intentions to decide how police is best used.",
       "benefitType": "security",
       "benefitText": "[number]% better public safety",
