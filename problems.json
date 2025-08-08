@@ -140,7 +140,7 @@
        "problem": "Municipal workers need to spend a lot of time to check applications for benefits and decide if the information is truthful.",
       "solution": "AI system that watches public movements, and checks applicant trustworthiness.",
       "benefitType": "convenience",
-      "benefitText": "[number]% faster and better municipalityt services",
+      "benefitText": "[number]% faster and better municipality services",
       "costType": "privacy",
       "costText": "Around [number]% more access to personal information based on public movements for [affected]"
 
