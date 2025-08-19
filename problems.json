@@ -7,7 +7,7 @@
       "benefitType": "money",
       "benefitText": "€[number] lower yearly fees for using the platform",
       "costType": "speech",
-      "costText": "Around [number]% less access to political opinions from [affected]"
+      "costText": "Around [number]% fewer opportunities to share political opinions for [affected]"
     },
      {
       "id": 2,
@@ -16,7 +16,7 @@
       "benefitType": "security",
       "benefitText": "[number]% fewer public safety risks",
       "costType": "speech",
-      "costText": "Around [number]% less access to political opinions for [affected]"
+      "costText": "Around [number]% fewer opportunities to share political opinions for [affected]"
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@
       "benefitType": "convenience",
       "benefitText": "[number]% better experience for users",
       "costType": "speech",
-      "costText": "Around [number]% less access to political opinions for [affected]"
+      "costText": "Around [number]% fewer opportunities to share political opinions for [affected]"
     },
     {
       "id": 4,
@@ -34,7 +34,7 @@
       "benefitType": "convenience",
       "benefitText": "[number]% less fake news seen by people",
       "costType": "press",
-      "costText": "Around [number]% less access to news content for [affected]"
+      "costText": "Around [number]% less access to news content from [affected] media outlets"
     },
     {
       "id": 5,
@@ -43,7 +43,7 @@
       "benefitType": "money",
       "benefitText": "€[number] lower yearly fees for using the platform",
       "costType": "press",
-      "costText": "Around [number]% less access to news content for [affected]"
+      "costText": "Around [number]% less access to news content from [affected] media outlets" 
     },
     {
       "id": 6,
@@ -52,7 +52,7 @@
       "benefitType": "security",
       "benefitText": "[number]% better crime detection",
       "costType": "press",
-      "costText": "Around [number]% less access to news content for [affected]"
+      "costText": "Around [number]% less access to news content from [affected] media outlets"
     },
     {
       "id": 7,
