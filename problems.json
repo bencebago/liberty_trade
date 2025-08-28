@@ -138,7 +138,7 @@
     {
       "id": 16,
        "problem": "Municipal workers need to spend a lot of time to check applications for benefits and decide if the information is truthful.",
-      "solution": "AI system that watches public movements, and checks applicant trustworthiness.",
+      "solution": "AI system that watches online financial activity, and checks application truthfulness.",
       "benefitType": "convenience",
       "benefitText": "[number]% faster and better municipality services",
       "costType": "privacy",
@@ -147,8 +147,8 @@
     },
     {
       "id": 17,
-      "problem": "Municipal services need to pay many people to check if applicants are honest when they apply for benefits or services, which costs a lot of money.",
-      "solution": "AI system that watches public movements, and checks applicant trustworthiness.",
+      "problem": "Municipal workers need to spend a lot of money to check applications for benefits and decide if the information is truthful.",
+      "solution": "AI system that watches online financial activity, and checks application truthfulness.",
       "benefitType": "money",
       "benefitText": "€[number] less taxes paid each year",
       "costType": "privacy",
