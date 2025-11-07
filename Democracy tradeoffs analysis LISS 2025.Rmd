@@ -1,0 +1,112 @@
+---
+title: "Democracy tradeoffs LISS"
+output: html_notebook
+---
+
+Load libraries 
+
+```{r}
+# Read in libraries
+library(haven)
+library(tidyverse)
+
+#library(nlme)
+#library(lme4)
+
+options(tidyverse.quiet = TRUE)
+options(dplyr.summarise.inform = FALSE)
+
+```
+
+Read in data
+
+```{r}
+# Load data
+LISS_democracy <- read_sav("C:/Users/damasino/OneDrive - Tilburg University/Desktop/Research/Tilburg/Democracy tradeoffs/LISS September 2025/L_TiUMon_SID_1.0p.sav")
+
+# Get rid of incomplete answers: N = 45, total resulting N  = 2251
+LISS_democracy_complete = LISS_democracy %>% drop_na(Q7d) # drop any with incomplete answers to problems
+
+# Switch data to long format for each round
+LISS_democracy_long = LISS_democracy_complete %>%
+  mutate(across(matches("^(problem|problem__|cost_|benefit_|affected_)\\d+$"), zap_labels)) %>%  # remove labels
+  pivot_longer(
+    cols = matches("^(problem|problem__|cost_|benefit_|affected_)\\d+$"), 
+    names_to = c(".value", "round"), 
+    names_pattern = "^(problem|problem__|cost_|benefit_|affected_)(\\d+)"
+    )  %>%
+  mutate(round = as.integer(round)) %>% # make round as an integer
+  rename(problem_id = "problem__", benefit = "benefit_", cost = "cost_", affected = "affected_", problem_resp = "problem") %>% # name columns more nicely
+  relocate(c("round", "problem_id", "problem_resp", "benefit", "cost", "affected"), .after = "voorbeeld") # Rearrange columns
+
+# Label the type of liberty and benefit for each, add in the numerical values for costs/benefits
+
+LISS_democracy_long = LISS_democracy_long %>%
+  mutate(liberty_type = case_when(problem_id %in% c(1,2,3) ~ "speech", 
+                                  problem_id %in% c(4,5,6) ~"press", 
+                                  problem_id %in% c(7,8,9) ~"due_process", 
+                                  problem_id %in% c(10,11,12) ~"assembly", 
+                                  problem_id %in% c(13,14,15) ~"equality", 
+                                  problem_id %in% c(16,17,18) ~"privacy" ), 
+         benefit_type = case_when(problem_id %in% c(1,4,7,10,13,16) ~"money", 
+                                  problem_id %in% c(2,5,8,11,14,17) ~"security",
+                                  problem_id %in% c(3,6,9,12,15,18) ~"convenience"),
+         benefit_value = case_when(problem_id %in% c(1,5,8,11,14,17) & benefit == 1 ~ 50,
+                                   problem_id %in% c(1,5,8,11,14,17) & benefit == 2 ~ 100,
+                                   problem_id %in% c(1,5,8,11,14,17) & benefit == 3 ~ 200, 
+                                   problem_id %in% c(2,3,4,6,7,9,10,12,13,15,16,18) & benefit == 1 ~ 50,
+                                   problem_id %in% c(2,3,4,6,7,9,10,12,13,15,16,18) & benefit == 2 ~ 70,
+                                   problem_id %in% c(2,3,4,6,7,9,10,12,13,15,16,18) & benefit == 3 ~ 90), 
+         cost_value = case_when(cost == 1 ~ 10,
+                                cost == 2 ~ 30,
+                                cost == 3 ~ 50), 
+         affected_group = case_when(affected == 1 ~ "Left", 
+                                    affected == 2 ~ "Right", 
+                                    affected == 3 ~ "Everyone")) %>%
+  relocate(c("liberty_type", "benefit_type", "benefit_value", "cost_value", "affected_group"), .after = "affected") # Rearrange columns
+
+# Q1 = personal importance 
+# Q2 = societal/democratic importance
+# a = assembly/demonstrations
+# b = press/variety of media
+# c = speech/diverse opinions social media
+# d = due process/present court cases
+# e = equality/equal treatment in job applications
+# f = privacy/private from gov't
+
+# Q3 = political party supported
+# Q4 = strength of belief/support
+
+# Q5 = feelings toward two groups
+# a = left leaning
+# b = right leaning
+
+# Q6 = self placement on 0 =left to 100 = right scale
+
+# Q7 How acceptable is it for own-party or leaning politicians to:
+# a = prosecute journalists
+# b = not accept election results if loss
+# c = reduce support for opposite side media
+# d = revoke charitable(?) status of organizations affiliated with opposite side
+
+  
+```
+
+
+Descriptives
+
+```{r}
+# Age
+hist(LISS_democracy$leeftijd)
+
+# Political leaning left - right
+hist(LISS_democracy$Q6)
+
+```
+
+Preregistered analyses
+
+```{r}
+
+```
+
