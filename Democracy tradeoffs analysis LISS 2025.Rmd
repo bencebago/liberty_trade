@@ -9,9 +9,7 @@ Load libraries
 # Read in libraries
 library(haven)
 library(tidyverse)
-
-#library(nlme)
-#library(lme4)
+library(lmerTest)
 
 options(tidyverse.quiet = TRUE)
 options(dplyr.summarise.inform = FALSE)
@@ -20,9 +18,12 @@ options(dplyr.summarise.inform = FALSE)
 
 Read in data
 
-```{r}
+```{r setup}
 # Load data
-LISS_democracy <- read_sav("C:/Users/damasino/OneDrive - Tilburg University/Desktop/Research/Tilburg/Democracy tradeoffs/LISS September 2025/L_TiUMon_SID_1.0p.sav")
+#LISS_democracy <- read_sav("C:/Users/damasino/OneDrive - Tilburg University/Desktop/Research/Tilburg/Democracy tradeoffs/LISS September 2025/L_TiUMon_SID_1.0p.sav")
+
+LISS_democracy <- read_sav("C:/Users/bbago/OneDrive - Tilburg University/Documents/GitHub/liberty/L_TiUMon_SID_1.0p.sav")
+
 
 # Get rid of incomplete answers: N = 45, total resulting N  = 2251
 LISS_democracy_complete = LISS_democracy %>% drop_na(Q7d) # drop any with incomplete answers to problems
@@ -57,12 +58,25 @@ LISS_democracy_long = LISS_democracy_long %>%
                                    problem_id %in% c(2,3,4,6,7,9,10,12,13,15,16,18) & benefit == 1 ~ 50,
                                    problem_id %in% c(2,3,4,6,7,9,10,12,13,15,16,18) & benefit == 2 ~ 70,
                                    problem_id %in% c(2,3,4,6,7,9,10,12,13,15,16,18) & benefit == 3 ~ 90), 
+         benefit_stat = case_when(benefit == 1 ~ -1,
+                                  benefit == 2 ~ 0,
+                                  benefit == 3 ~ 1),
+         cost_stat = case_when(cost == 1 ~ -1,
+                               cost == 2 ~ 0,
+                               cost == 3 ~ 1),
          cost_value = case_when(cost == 1 ~ 10,
                                 cost == 2 ~ 30,
                                 cost == 3 ~ 50), 
          affected_group = case_when(affected == 1 ~ "Left", 
                                     affected == 2 ~ "Right", 
-                                    affected == 3 ~ "Everyone")) %>%
+                                    affected == 3 ~ "Everyone"),
+         affected_stat = case_when(affected == 1 & Q6 < 50 ~ 1 ,
+                              affected == 1 & Q6 > 49 ~ -1,
+                              affected == 2 & Q6 < 50 ~ -1 ,
+                              affected == 2 & Q6 > 49 ~ 1,
+                              affected == 3 ~ 0),
+         outparty_dislike = case_when(Q6 < 50 ~ Q5a,
+                                      Q6 > 49 ~ Q5b)) %>%
   relocate(c("liberty_type", "benefit_type", "benefit_value", "cost_value", "affected_group"), .after = "affected") # Rearrange columns
 
 # Q1 = personal importance 
@@ -95,18 +109,165 @@ LISS_democracy_long = LISS_democracy_long %>%
 
 Descriptives
 
-```{r}
+```{r descriptives}
 # Age
 hist(LISS_democracy$leeftijd)
 
 # Political leaning left - right
 hist(LISS_democracy$Q6)
 
+
 ```
 
 Preregistered analyses
 
-```{r}
+```{r prereg}
+
+
+model1 = lmer(voorbeeld ~ affected_stat + cost_stat + benefit_stat + (affected_stat+cost_stat+benefit_stat|nomem_encr) + (affected_stat+cost_stat+benefit_stat|benefit_type) + (affected_stat+cost_stat+benefit_stat|liberty_type), data = LISS_democracy_long, na.action=na.omit)
+
+model1 = lmer(scale(problem_resp) ~ affected_stat*scale(outparty_dislike) + cost_stat + benefit_stat  + (1|nomem_encr) +  (1|liberty_type), data = LISS_democracy_long, na.action=na.omit) 
+
+summary(model1)
+
+
+
+model1 = lmer(scale(problem_resp) ~ affected_stat*scale(outparty_dislike) + cost_stat + benefit_stat  + (1|nomem_encr) +  (1|benefit_type), data = LISS_democracy_long, na.action=na.omit) 
+
+summary(model1)
+
+
+#Per Liberty type
+#####effects are stable within liberties, however, there is variance on the effect size level
+
+liberty_types <- unique(LISS_democracy_long$liberty_type)
+
+comparison_table <- map_df(liberty_types, function(lib_type) {
+  subset_data <- LISS_democracy_long[LISS_democracy_long$liberty_type == lib_type, ]
+  
+  model <- lmer(
+    scale(problem_resp) ~ affected_stat*scale(outparty_dislike) + 
+      cost_stat + benefit_stat + 
+      (1|nomem_encr) + (1|benefit_type), 
+    data = subset_data, 
+    na.action = na.omit
+  )
+  
+  tidy(model, effects = "fixed") %>%
+    mutate(liberty_type = lib_type)
+})
+
+
+comparison_wide <- comparison_table %>%
+  select(liberty_type, term, estimate, p.value) %>%
+  pivot_wider(
+    names_from = term,
+    values_from = c(estimate, p.value),
+    names_glue = "{term}_{.value}"
+  )
+
+
+
+#PER BENEFIT TYPE
+#####effects are stable within benefits, however, there is variance on the effect size level
+
+liberty_types <- unique(LISS_democracy_long$benefit_type)
+
+comparison_table <- map_df(liberty_types, function(lib_type) {
+  subset_data <- LISS_democracy_long[LISS_democracy_long$benefit_type == lib_type, ]
+  
+  model <- lmer(
+    scale(problem_resp) ~ affected_stat*scale(outparty_dislike) + 
+      cost_stat + benefit_stat + 
+      (1|nomem_encr) + (1|liberty_type), 
+    data = subset_data, 
+    na.action = na.omit
+  )
+  
+  tidy(model, effects = "fixed") %>%
+    mutate(liberty_type = lib_type)
+})
+
+
+comparison_wide <- comparison_table %>%
+  select(liberty_type, term, estimate, p.value) %>%
+  pivot_wider(
+    names_from = term,
+    values_from = c(estimate, p.value),
+    names_glue = "{term}_{.value}"
+  )
+
+
+
+
+
 
 ```
 
+
+Preregistered analyses visualization
+
+```{r visualisation}
+
+library(ggplot2)
+library(dplyr)
+
+# Option 1: Simple bar graph with means and error bars
+LISS_democracy_long %>%
+  group_by(liberty_type) %>%
+  summarise(
+    mean_concern = mean(problem_resp, na.rm = TRUE),
+    sd_concern = sd(problem_resp, na.rm = TRUE),
+    se_concern = sd_concern / sqrt(n()),
+    n = n()
+  ) %>%
+  ggplot(aes(x = mean_concern, y = reorder(liberty_type, mean_concern))) +
+  geom_col(fill = "#2E86AB", alpha = 0.8) +
+  geom_errorbar(aes(xmin = mean_concern - sd_concern, 
+                    xmax = mean_concern + sd_concern),
+                width = 0.3, linewidth = 0.8) +
+  geom_text(aes(label = sprintf("%.1f", mean_concern)), 
+            hjust = -0.2, size = 3.5) +
+  labs(
+    title = "Average Technology Acceptance by Liberty Type",
+    subtitle = "Error bars show ± 1 SD",
+    x = "Mean Technology Acceptance (0 = refusing tech, 100 = accepting tech)",
+    y = "Liberty Type"
+  ) +
+  theme_minimal() +
+  theme(
+    panel.grid.major.y = element_blank(),
+    plot.title = element_text(face = "bold")
+  )
+
+
+
+LISS_democracy_long %>%
+  group_by(benefit_type) %>%
+  summarise(
+    mean_concern = mean(problem_resp, na.rm = TRUE),
+    sd_concern = sd(problem_resp, na.rm = TRUE),
+    se_concern = sd_concern / sqrt(n()),
+    n = n()
+  ) %>%
+  ggplot(aes(x = mean_concern, y = reorder(benefit_type, mean_concern))) +
+  geom_col(fill = "#2E86AB", alpha = 0.8) +
+  geom_errorbar(aes(xmin = mean_concern - sd_concern, 
+                    xmax = mean_concern + sd_concern),
+                width = 0.3, linewidth = 0.8) +
+  geom_text(aes(label = sprintf("%.1f", mean_concern)), 
+            hjust = -0.2, size = 3.5) +
+  labs(
+    title = "Average Technology Acceptance by Benefit Type",
+    subtitle = "Error bars show ± 1 SD",
+    x = "Mean Technology Acceptance (0 = refusing tech, 100 = accepting tech)",
+    y = "Benefit Type"
+  ) +
+  theme_minimal() +
+  theme(
+    panel.grid.major.y = element_blank(),
+    plot.title = element_text(face = "bold")
+  )
+
+
+```
