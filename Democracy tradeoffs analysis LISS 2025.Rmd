@@ -20,9 +20,9 @@ Read in data
 
 ```{r setup}
 # Load data
-#LISS_democracy <- read_sav("C:/Users/damasino/OneDrive - Tilburg University/Desktop/Research/Tilburg/Democracy tradeoffs/LISS September 2025/L_TiUMon_SID_1.0p.sav")
+LISS_democracy <- read_sav("C:/Users/damasino/OneDrive - Tilburg University/Desktop/Research/Tilburg/Democracy tradeoffs/LISS September 2025/L_TiUMon_SID_1.0p.sav")
 
-LISS_democracy <- read_sav("C:/Users/bbago/OneDrive - Tilburg University/Documents/GitHub/liberty/L_TiUMon_SID_1.0p.sav")
+#LISS_democracy <- read_sav("C:/Users/bbago/OneDrive - Tilburg University/Documents/GitHub/liberty/L_TiUMon_SID_1.0p.sav")
 
 
 # Get rid of incomplete answers: N = 45, total resulting N  = 2251
@@ -37,27 +37,27 @@ LISS_democracy_long = LISS_democracy_complete %>%
     names_pattern = "^(problem|problem__|cost_|benefit_|affected_)(\\d+)"
     )  %>%
   mutate(round = as.integer(round)) %>% # make round as an integer
-  rename(problem_id = "problem__", benefit = "benefit_", cost = "cost_", affected = "affected_", problem_resp = "problem") %>% # name columns more nicely
-  relocate(c("round", "problem_id", "problem_resp", "benefit", "cost", "affected"), .after = "voorbeeld") # Rearrange columns
+  rename(problem_order = "problem__", benefit = "benefit_", cost = "cost_", affected = "affected_", problem_resp = "problem") %>% # name columns more nicely
+  relocate(c("round", "problem_resp", "benefit", "cost", "affected", "problem_order"), .after = "voorbeeld") # Rearrange columns
 
 # Label the type of liberty and benefit for each, add in the numerical values for costs/benefits
 
 LISS_democracy_long = LISS_democracy_long %>%
-  mutate(liberty_type = case_when(problem_id %in% c(1,2,3) ~ "speech", 
-                                  problem_id %in% c(4,5,6) ~"press", 
-                                  problem_id %in% c(7,8,9) ~"due_process", 
-                                  problem_id %in% c(10,11,12) ~"assembly", 
-                                  problem_id %in% c(13,14,15) ~"equality", 
-                                  problem_id %in% c(16,17,18) ~"privacy" ), 
-         benefit_type = case_when(problem_id %in% c(1,4,7,10,13,16) ~"money", 
-                                  problem_id %in% c(2,5,8,11,14,17) ~"security",
-                                  problem_id %in% c(3,6,9,12,15,18) ~"convenience"),
-         benefit_value = case_when(problem_id %in% c(1,5,8,11,14,17) & benefit == 1 ~ 50,
-                                   problem_id %in% c(1,5,8,11,14,17) & benefit == 2 ~ 100,
-                                   problem_id %in% c(1,5,8,11,14,17) & benefit == 3 ~ 200, 
-                                   problem_id %in% c(2,3,4,6,7,9,10,12,13,15,16,18) & benefit == 1 ~ 50,
-                                   problem_id %in% c(2,3,4,6,7,9,10,12,13,15,16,18) & benefit == 2 ~ 70,
-                                   problem_id %in% c(2,3,4,6,7,9,10,12,13,15,16,18) & benefit == 3 ~ 90), 
+  mutate(liberty_type = case_when(round %in% c(1,2,3) ~ "speech", 
+                                  round %in% c(4,5,6) ~"press", 
+                                  round %in% c(7,8,9) ~"due_process", 
+                                  round %in% c(10,11,12) ~"assembly", 
+                                  round %in% c(13,14,15) ~"equality", 
+                                  round %in% c(16,17,18) ~"privacy" ), 
+         benefit_type = case_when(round %in% c(1,4,7,10,13,16) ~"money", 
+                                  round %in% c(2,5,8,11,14,17) ~"security",
+                                  round %in% c(3,6,9,12,15,18) ~"convenience"),
+         benefit_value = case_when(round %in% c(1,5,8,11,14,17) & benefit == 1 ~ 50,
+                                   round %in% c(1,5,8,11,14,17) & benefit == 2 ~ 100,
+                                   round %in% c(1,5,8,11,14,17) & benefit == 3 ~ 200, 
+                                   round %in% c(2,3,4,6,7,9,10,12,13,15,16,18) & benefit == 1 ~ 50,
+                                   round %in% c(2,3,4,6,7,9,10,12,13,15,16,18) & benefit == 2 ~ 70,
+                                   round %in% c(2,3,4,6,7,9,10,12,13,15,16,18) & benefit == 3 ~ 90), 
          benefit_stat = case_when(benefit == 1 ~ -1,
                                   benefit == 2 ~ 0,
                                   benefit == 3 ~ 1),
