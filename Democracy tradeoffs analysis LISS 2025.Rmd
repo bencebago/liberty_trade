@@ -20,9 +20,15 @@ Read in data
 
 ```{r setup}
 # Load data
-LISS_democracy <- read_sav("C:/Users/damasino/OneDrive - Tilburg University/Desktop/Research/Tilburg/Democracy tradeoffs/LISS September 2025/L_TiUMon_SID_1.0p.sav")
+#LISS_democracy <- read_sav("C:/Users/damasino/OneDrive - Tilburg University/Desktop/Research/Tilburg/Democracy tradeoffs/LISS September 2025/L_TiUMon_SID_1.0p.sav")
 
-#LISS_democracy <- read_sav("C:/Users/bbago/OneDrive - Tilburg University/Documents/GitHub/liberty/L_TiUMon_SID_1.0p.sav")
+LISS_democracy <- read_sav("C:/Users/bbago/OneDrive - Tilburg University/Documents/GitHub/liberty/L_TiUMon_SID_1.0p.sav")
+
+LISS_democracy <- LISS_democracy %>%
+  mutate(nettocat = case_when(
+    nettocat %in% c(13, 14) ~ NA_real_,  # Use NA_real_ for numeric, NA_character_ for character
+    TRUE ~ nettocat  # Keep all other values as is
+  ))
 
 
 # Get rid of incomplete answers: N = 45, total resulting N  = 2251
@@ -49,9 +55,9 @@ LISS_democracy_long = LISS_democracy_long %>%
                                   round %in% c(10,11,12) ~"assembly", 
                                   round %in% c(13,14,15) ~"equality", 
                                   round %in% c(16,17,18) ~"privacy" ), 
-         benefit_type = case_when(round %in% c(1,4,7,10,13,16) ~"money", 
-                                  round %in% c(2,5,8,11,14,17) ~"security",
-                                  round %in% c(3,6,9,12,15,18) ~"convenience"),
+         benefit_type = case_when(round %in% c(1,5,8,11,14,17) ~"money", 
+                                  round %in% c(2,6,9,12,15,18) ~"security",
+                                  round %in% c(3,4,7,10,13,16) ~"convenience"),
          benefit_value = case_when(round %in% c(1,5,8,11,14,17) & benefit == 1 ~ 50,
                                    round %in% c(1,5,8,11,14,17) & benefit == 2 ~ 100,
                                    round %in% c(1,5,8,11,14,17) & benefit == 3 ~ 200, 
@@ -76,7 +82,19 @@ LISS_democracy_long = LISS_democracy_long %>%
                               affected == 2 & Q6 > 49 ~ 1,
                               affected == 3 ~ 0),
          outparty_dislike = case_when(Q6 < 50 ~ Q5a,
-                                      Q6 > 49 ~ Q5b)) %>%
+                                      Q6 > 49 ~ Q5b),
+         liberty_prior_societal = case_when(liberty_type == 'speech' ~ Q2c,
+                                   liberty_type == 'press' ~ Q2b,
+                                   liberty_type == 'due_process' ~ Q2d,
+                                   liberty_type == 'assembly' ~ Q2a,
+                                   liberty_type == 'equality' ~ Q2e,
+                                   liberty_type == 'privacy' ~ Q2f),
+         liberty_prior_personal = case_when(liberty_type == 'speech' ~ Q1c,
+                                   liberty_type == 'press' ~ Q1b,
+                                   liberty_type == 'due_process' ~ Q1d,
+                                   liberty_type == 'assembly' ~ Q1a,
+                                   liberty_type == 'equality' ~ Q1e,
+                                   liberty_type == 'privacy' ~ Q1f)) %>%
   relocate(c("liberty_type", "benefit_type", "benefit_value", "cost_value", "affected_group"), .after = "affected") # Rearrange columns
 
 # Q1 = personal importance 
@@ -119,16 +137,86 @@ hist(LISS_democracy$Q6)
 
 ```
 
+
+Inter-liberty and inter-benefit effects
+
+```{r visualisation}
+
+library(ggplot2)
+library(dplyr)
+
+# Option 1: Simple bar graph with means and error bars
+LISS_democracy_long %>%
+  group_by(liberty_type) %>%
+  summarise(
+    mean_concern = mean(problem_resp, na.rm = TRUE),
+    sd_concern = sd(problem_resp, na.rm = TRUE),
+    se_concern = sd_concern / sqrt(n()),
+    n = n()
+  ) %>%
+  ggplot(aes(x = mean_concern, y = reorder(liberty_type, mean_concern))) +
+  geom_col(fill = "#2E86AB", alpha = 0.8) +
+  geom_errorbar(aes(xmin = mean_concern - sd_concern, 
+                    xmax = mean_concern + sd_concern),
+                width = 0.3, linewidth = 0.8) +
+  geom_text(aes(label = sprintf("%.1f", mean_concern)), 
+            hjust = -0.2, size = 3.5) +
+  labs(
+    title = "Average Technology Acceptance by Liberty Type",
+    subtitle = "Error bars show ± 1 SD",
+    x = "Mean Technology Acceptance (0 = refusing tech, 100 = accepting tech)",
+    y = "Liberty Type"
+  ) +
+  theme_minimal() +
+  theme(
+    panel.grid.major.y = element_blank(),
+    plot.title = element_text(face = "bold")
+  )
+
+
+
+LISS_democracy_long %>%
+  group_by(benefit_type) %>%
+  summarise(
+    mean_concern = mean(problem_resp, na.rm = TRUE),
+    sd_concern = sd(problem_resp, na.rm = TRUE),
+    se_concern = sd_concern / sqrt(n()),
+    n = n()
+  ) %>%
+  ggplot(aes(x = mean_concern, y = reorder(benefit_type, mean_concern))) +
+  geom_col(fill = "#2E86AB", alpha = 0.8) +
+  geom_errorbar(aes(xmin = mean_concern - sd_concern, 
+                    xmax = mean_concern + sd_concern),
+                width = 0.3, linewidth = 0.8) +
+  geom_text(aes(label = sprintf("%.1f", mean_concern)), 
+            hjust = -0.2, size = 3.5) +
+  labs(
+    title = "Average Technology Acceptance by Benefit Type",
+    subtitle = "Error bars show ± 1 SD",
+    x = "Mean Technology Acceptance (0 = refusing tech, 100 = accepting tech)",
+    y = "Benefit Type"
+  ) +
+  theme_minimal() +
+  theme(
+    panel.grid.major.y = element_blank(),
+    plot.title = element_text(face = "bold")
+  )
+
+
+```
+
+
 Preregistered analyses
 
-```{r prereg}
+```{r preregistered analysis}
 
 
-model1 = lmer(voorbeeld ~ affected_stat + cost_stat + benefit_stat + (affected_stat+cost_stat+benefit_stat|nomem_encr) + (affected_stat+cost_stat+benefit_stat|benefit_type) + (affected_stat+cost_stat+benefit_stat|liberty_type), data = LISS_democracy_long, na.action=na.omit)
+model1 = lmer(scale(problem_resp) ~ affected_stat + cost_stat + benefit_stat + (affected_stat+cost_stat+benefit_stat|nomem_encr) + (affected_stat+cost_stat+benefit_stat|benefit_type) + (affected_stat+cost_stat+benefit_stat|liberty_type), data = LISS_democracy_long, na.action=na.omit)
 
-model1 = lmer(scale(problem_resp) ~ affected_stat*scale(outparty_dislike) + cost_stat + benefit_stat  + (1|nomem_encr) +  (1|liberty_type), data = LISS_democracy_long, na.action=na.omit) 
+model1 = lmer(scale(problem_resp) ~ affected_stat*scale(outparty_dislike) + cost_stat + benefit_stat  + (1|nomem_encr) + (1|benefit_type) + (1|liberty_type), data = LISS_democracy_long, na.action=na.omit) 
 
 summary(model1)
+
 
 
 
@@ -204,70 +292,220 @@ comparison_wide <- comparison_table %>%
 
 ```
 
+ visualisations
 
-Preregistered analyses visualization
 
-```{r visualisation}
+```{r prereg visualisation}
 
+####horse race plot for individual estimates
+
+library(broom.mixed)
 library(ggplot2)
 library(dplyr)
 
-# Option 1: Simple bar graph with means and error bars
-LISS_democracy_long %>%
-  group_by(liberty_type) %>%
-  summarise(
-    mean_concern = mean(problem_resp, na.rm = TRUE),
-    sd_concern = sd(problem_resp, na.rm = TRUE),
-    se_concern = sd_concern / sqrt(n()),
-    n = n()
-  ) %>%
-  ggplot(aes(x = mean_concern, y = reorder(liberty_type, mean_concern))) +
-  geom_col(fill = "#2E86AB", alpha = 0.8) +
-  geom_errorbar(aes(xmin = mean_concern - sd_concern, 
-                    xmax = mean_concern + sd_concern),
-                width = 0.3, linewidth = 0.8) +
-  geom_text(aes(label = sprintf("%.1f", mean_concern)), 
-            hjust = -0.2, size = 3.5) +
+# Fit your model
+model1 <- lmer(
+  scale(problem_resp) ~ affected_stat*scale(outparty_dislike) + 
+    cost_stat + benefit_stat*nettocat + 
+    scale(liberty_prior_personal) + scale(liberty_prior_societal) + 
+    (1|nomem_encr) + (1|benefit_type) + (1|liberty_type), 
+  data = LISS_democracy_long, 
+  na.action = na.omit
+)
+
+# Extract coefficients
+coef_data <- tidy(model1, effects = "fixed", conf.int = TRUE) %>%
+  filter(term != "(Intercept)") %>%  # Remove intercept
+  mutate(
+    significant = ifelse(p.value < 0.05, "Yes", "No"),
+    term_clean = case_when(
+      term == "affected_stat" ~ "Affected (Ingroup/Outgroup)",
+      term == "scale(outparty_dislike)" ~ "Outparty Dislike",
+      term == "cost_stat" ~ "Cost",
+      term == "benefit_stat" ~ "Benefit",
+      term == "nettocat" ~ "Income (Nettocat)",
+      term == "scale(liberty_prior_personal)" ~ "Liberty Prior (Personal)",
+      term == "scale(liberty_prior_societal)" ~ "Liberty Prior (Societal)",
+      term == "affected_stat:scale(outparty_dislike)" ~ "Affected × Outparty Dislike",
+      term == "benefit_stat:nettocat" ~ "Benefit × Income",
+      TRUE ~ term
+    )
+  )
+
+# Horse race plot
+ggplot(coef_data, aes(x = estimate, y = reorder(term_clean, estimate), color = significant)) +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "gray50", linewidth = 0.8) +
+  geom_point(size = 4) +
+  geom_errorbarh(aes(xmin = conf.low, xmax = conf.high), height = 0.3, linewidth = 1) +
+  geom_text(aes(label = sprintf("%.3f", estimate)), 
+            hjust = -0.3, size = 3.5, show.legend = FALSE) +
+  scale_color_manual(values = c("No" = "#D5A021", "Yes" = "#06A77D"),
+                     name = "p < .05") +
   labs(
-    title = "Average Technology Acceptance by Liberty Type",
-    subtitle = "Error bars show ± 1 SD",
-    x = "Mean Technology Acceptance (0 = refusing tech, 100 = accepting tech)",
-    y = "Liberty Type"
+    title = "Fixed Effects Estimates",
+    subtitle = "Standardized coefficients with 95% confidence intervals",
+    x = "Standardized Coefficient (β)",
+    y = NULL
   ) +
   theme_minimal() +
   theme(
+    legend.position = "bottom",
+    plot.title = element_text(face = "bold", size = 14),
     panel.grid.major.y = element_blank(),
-    plot.title = element_text(face = "bold")
+    axis.text.y = element_text(size = 11)
   )
 
 
 
-LISS_democracy_long %>%
-  group_by(benefit_type) %>%
-  summarise(
-    mean_concern = mean(problem_resp, na.rm = TRUE),
-    sd_concern = sd(problem_resp, na.rm = TRUE),
-    se_concern = sd_concern / sqrt(n()),
-    n = n()
-  ) %>%
-  ggplot(aes(x = mean_concern, y = reorder(benefit_type, mean_concern))) +
-  geom_col(fill = "#2E86AB", alpha = 0.8) +
-  geom_errorbar(aes(xmin = mean_concern - sd_concern, 
-                    xmax = mean_concern + sd_concern),
-                width = 0.3, linewidth = 0.8) +
-  geom_text(aes(label = sprintf("%.1f", mean_concern)), 
-            hjust = -0.2, size = 3.5) +
+
+
+
+
+```
+
+```{r interaction plots} 
+
+library(ggeffects)
+library(ggplot2)
+
+#Affected × Outparty Dislike; shows exactly as hypothesized, affective polarization is interacted with 
+pred_interaction1 <- ggpredict(model1, terms = c("outparty_dislike [all]", "affected_stat"))
+
+ggplot(pred_interaction1, aes(x = x, y = predicted, color = group, fill = group)) +
+  geom_line(linewidth = 1.5) +
+  geom_ribbon(aes(ymin = conf.low, ymax = conf.high), alpha = 0.2, color = NA) +
+  scale_color_manual(values = c("#E63946", "#457B9D", "#06A77D"),
+                     labels = c("Outgroup", "Everyone", "Ingroup"),
+                     name = "Who is Affected") +
+  scale_fill_manual(values = c("#E63946", "#457B9D", "#06A77D"),
+                    labels = c("Outgroup", "Everyone", "Ingroup"),
+                    name = "Who is Affected") +
   labs(
-    title = "Average Technology Acceptance by Benefit Type",
-    subtitle = "Error bars show ± 1 SD",
-    x = "Mean Technology Acceptance (0 = refusing tech, 100 = accepting tech)",
-    y = "Benefit Type"
+    title = "Interaction: Affected Status × Outparty Dislike",
+    x = "Outparty Dislike",
+    y = "Technology Acceptance (standardized)"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+
+
+```
+
+
+```{r wild exploration}
+
+
+model1 = lmer(scale(problem_resp) ~ affected_stat*scale(outparty_dislike)+ cost_stat*scale(liberty_prior_personal)+benefit_stat*scale(liberty_prior_personal)+benefit_stat*scale(liberty_prior_societal) + cost_stat*scale(liberty_prior_societal) + (1|nomem_encr) + (1|benefit_type) + (1|liberty_type), data = LISS_democracy_long, na.action=na.omit) 
+
+summary(model1)
+
+
+####RANDOM FOREST APPROACH
+
+library(randomForest)
+library(dplyr)
+library(ggplot2)
+
+rf_data <- LISS_democracy_long %>%
+  select(problem_resp, affected_stat, outparty_dislike, cost_stat, benefit_stat,
+         liberty_prior_personal, liberty_prior_societal, 
+         nomem_encr, benefit_type, nettocat, liberty_type, leeftijd, geslacht) %>%
+  na.omit() %>%
+  mutate(
+    benefit_type = as.character(benefit_type),
+    liberty_type = as.character(liberty_type),
+    geslacht = as.character(geslacht)
+  )
+
+rf_model2 <- randomForest(
+  problem_resp ~ affected_stat + outparty_dislike + cost_stat + benefit_stat +
+    liberty_prior_personal + liberty_prior_societal + nettocat + leeftijd + geslacht + 
+    benefit_type + liberty_type,
+  data = rf_data,
+  importance = TRUE,
+  ntree = 500,
+  na.action = na.omit
+)
+
+print(rf_model2)
+
+varImpPlot(rf_model2, main = "Variable Importance")
+#variable importance plot suggests that prior beliefs matter the most 
+
+
+
+```
+
+
+```{r horse race wild exploration} 
+
+
+
+# Fit your model
+model1 <- lmer(
+  scale(problem_resp) ~ affected_stat*scale(outparty_dislike) + 
+    cost_stat*scale(liberty_prior_personal) + 
+    benefit_stat*scale(liberty_prior_personal) + 
+    benefit_stat*scale(liberty_prior_societal) + 
+    cost_stat*scale(liberty_prior_societal) + 
+    (1|nomem_encr) + (1|benefit_type) + (1|liberty_type), 
+  data = LISS_democracy_long, 
+  na.action = na.omit
+)
+
+# View summary
+summary(model1)
+
+# Extract coefficients with confidence intervals
+coef_data <- tidy(model1, effects = "fixed", conf.int = TRUE) %>%
+  filter(term != "(Intercept)") %>%
+  mutate(
+    significant = ifelse(p.value < 0.05, "Yes", "No"),
+    term_clean = case_when(
+      term == "affected_stat" ~ "Affected (Ingroup/Outgroup)",
+      term == "scale(outparty_dislike)" ~ "Outparty Dislike",
+      term == "cost_stat" ~ "Cost",
+      term == "benefit_stat" ~ "Benefit",
+      term == "scale(liberty_prior_personal)" ~ "Liberty Prior (Personal)",
+      term == "scale(liberty_prior_societal)" ~ "Liberty Prior (Societal)",
+      term == "affected_stat:scale(outparty_dislike)" ~ "Affected × Outparty Dislike",
+      term == "cost_stat:scale(liberty_prior_personal)" ~ "Cost × Liberty Prior (Personal)",
+      term == "scale(liberty_prior_personal):benefit_stat" ~ "Benefit × Liberty Prior (Personal)",
+      term == "benefit_stat:scale(liberty_prior_societal)" ~ "Benefit × Liberty Prior (Societal)",
+      term == "cost_stat:scale(liberty_prior_societal)" ~ "Cost × Liberty Prior (Societal)",
+      TRUE ~ term
+    )
+  )
+
+# Create horse race plot
+ggplot(coef_data, aes(x = estimate, y = reorder(term_clean, estimate), color = significant)) +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "gray50", linewidth = 0.8) +
+  geom_point(size = 4) +
+  geom_errorbarh(aes(xmin = conf.low, xmax = conf.high), height = 0.3, linewidth = 1) +
+  geom_text(aes(label = sprintf("%.3f", estimate)), 
+            hjust = ifelse(coef_data$estimate > 0, -0.3, 1.3), 
+            size = 3.5, 
+            show.legend = FALSE) +
+  scale_color_manual(
+    values = c("No" = "#D5A021", "Yes" = "#06A77D"),
+    name = "p < .05"
+  ) +
+  labs(
+    title = "Fixed Effects Estimates",
+    subtitle = "Standardized coefficients with 95% confidence intervals",
+    x = "Standardized Coefficient (β)",
+    y = NULL
   ) +
   theme_minimal() +
   theme(
+    legend.position = "bottom",
+    plot.title = element_text(face = "bold", size = 14),
+    plot.subtitle = element_text(size = 11),
     panel.grid.major.y = element_blank(),
-    plot.title = element_text(face = "bold")
+    axis.text.y = element_text(size = 10),
+    axis.text.x = element_text(size = 10)
   )
+
 
 
 ```
