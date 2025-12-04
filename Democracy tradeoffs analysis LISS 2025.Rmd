@@ -135,6 +135,83 @@ hist(LISS_democracy$leeftijd)
 hist(LISS_democracy$Q6)
 
 
+
+hist(LISS_democracy_long$liberty_prior_personal)
+
+
+
+liberty_data <- LISS_democracy %>%
+  select(Q1a, Q1b, Q1c, Q1d, Q1e, Q1f) %>%
+  pivot_longer(
+    cols = everything(),
+    names_to = "question",
+    values_to = "value"
+  ) %>%
+  mutate(
+    liberty_type = case_when(
+      question == "Q1c" ~ "speech",
+      question == "Q1b" ~ "press",
+      question == "Q1d" ~ "due_process",
+      question == "Q1a" ~ "assembly",
+      question == "Q1e" ~ "equality",
+      question == "Q1f" ~ "privacy"
+    )
+  )
+liberty_data <- liberty_data %>%
+  group_by(liberty_type) %>%
+  mutate(median_val = median(value, na.rm = TRUE)) %>%
+  ungroup() %>%
+  mutate(liberty_type = fct_reorder(liberty_type, median_val))
+
+# Create horizontal boxplot
+ggplot(liberty_data, aes(x = value, y = liberty_type)) +
+  geom_boxplot(fill = "steelblue", alpha = 0.7) +
+  labs(
+    title = "Distribution of Values by Liberty Type",
+    x = "Value",
+    y = "Liberty Type"
+  ) +
+  theme_minimal()
+
+cor.test(LISS_democracy$Q2a, LISS_democracy$Q1a)#assembly
+
+cor.test(LISS_democracy$Q1f, LISS_democracy$Q2f)#privacy
+
+liberty_data <- LISS_democracy %>%
+  select(Q2a, Q2b, Q2c, Q2d, Q2e, Q2f) %>%
+  pivot_longer(
+    cols = everything(),
+    names_to = "question",
+    values_to = "value"
+  ) %>%
+  mutate(
+    liberty_type = case_when(
+      question == "Q2c" ~ "speech",
+      question == "Q2b" ~ "press",
+      question == "Q2d" ~ "due_process",
+      question == "Q2a" ~ "assembly",
+      question == "Q2e" ~ "equality",
+      question == "Q2f" ~ "privacy"
+    )
+  )
+liberty_data <- liberty_data %>%
+  group_by(liberty_type) %>%
+  mutate(median_val = median(value, na.rm = TRUE)) %>%
+  ungroup() %>%
+  mutate(liberty_type = fct_reorder(liberty_type, median_val))
+
+# Create horizontal boxplot
+ggplot(liberty_data, aes(x = value, y = liberty_type)) +
+  geom_boxplot(fill = "steelblue", alpha = 0.7) +
+  labs(
+    title = "Distribution of Values by Liberty Type",
+    x = "Value",
+    y = "Liberty Type"
+  ) +
+  theme_minimal()
+
+
+
 ```
 
 
