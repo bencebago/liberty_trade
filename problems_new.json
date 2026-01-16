@@ -1,0 +1,167 @@
+{
+  "problems": [
+    {
+      "id": 1,
+      "problem": "Social media websites need to moderate aggressive arguments between users, which often lead to deleting political opinions.",
+      "solution": "AI system that is more targeted toward aggressive arguments and keeps more political opinions.",
+      "benefitType": "money",
+      "benefitText": "Around [number]% more posts expressing politicial opinions from [affected]",
+      "costType": "speech",
+      "costText": "€[number] higher yearly fees for using the platform"
+    },
+     {
+      "id": 2,
+      "problem": "Social media websites need to moderate calls for violence from extremist groups between users, which often leads to deleting political opinions.",
+      "solution": "AI system that removes fewer posts and keeps more political opinions.",
+      "benefitType": "security",
+      "benefitText": "Around [number]% more opportunities to share political opinions for [affected]",
+      "costType": "speech",
+      "costText": "[number]% higher public safety risks"
+    },
+    {
+      "id": 3,
+      "problem": "Social media websites need to moderate aggressive arguments between users, which often lead to deleting political opinions.",
+      "solution": "AI system that removes fewer posts and keeps more political opinions.",
+      "benefitType": "convenience",
+      "benefitText": "Around [number]% more opportunities to share political opinions for [affected]",
+      "costType": "speech",
+      "costText": "[number]% worse experience for users"
+    },
+    {
+      "id": 4,
+      "problem": "News outlets often try to publish the most engaging stories, which leads to some news getting left out.",
+      "solution": "AI system that prioritises informativeness in publishing.",
+      "benefitType": "convenience",
+      "benefitText": "Around [number]% more access to investigative reporting from [affected] media outlets.", 
+      "costType": "press",
+      "costText": "[number]% less engaging news, worse jounral experience"
+    },
+    {
+      "id": 5,
+      "problem": "News outlets often try to publish the most engaging stories, which leads to some news getting left out.",
+      "solution": "AI system that prioritises informativeness in publishing.",
+      "benefitType": "money",
+      "benefitText": "Around [number]% more access to investigative reporting from [affected] media outlets.",
+      "costType": "press",
+      "costText": "€[number] higher yearly fees for accessing the news" 
+    },
+    {
+      "id": 6,
+      "problem": "News outlets might suppress stories that may interfere with police operations leading to some news getting left out.",
+      "solution": "AI system that prioritises informativeness over police operations.",
+      "benefitType": "security",
+      "benefitText": "Around [number]% more access to news content from [affected] media outlets",
+      "costType": "press",
+      "costText": "[number]% less likelihood of police catching criminals"
+    },
+    {
+      "id": 7,
+      "problem": "Courts are biased in certain types of cases that lead to unfair sentencing.",
+      "solution": "AI system informs judges to be less biased in sentencing.",
+      "benefitType": "convenience",
+      "benefitText": "Around [number]% more chance to get a fair sentencing in cases that usually affect [affected]",
+      "costType": "due_process",
+      "costText": "[number]% slower handling of court cases"
+    },
+    {
+      "id": 8,
+      "problem": "Courts are biased in certain types of cases that lead to unfair sentencing.",
+      "solution": "AI system informs judges to be less biased in sentencing.",
+      "benefitType": "money",
+      "benefitText": "Around [number]% more chance to get fair sentencing in cases that usually affect [affected]",
+      "costType": "due_process",
+      "costText": "€[number] more taxes paid each year"
+    },
+    {
+      "id": 9,
+      "problem": "Courts are biased in certain cases and more likely to sentence innocent people for prison.",
+      "solution": "AI system prioritises keeping inoocent people out of prioson.",
+      "benefitType": "security",
+      "benefitText": "Around [number]% more chance to get fair sentencing in cases that usually affect [affected]",
+      "costType": "due_process",
+      "costText": "[number]% higher public safety risks"
+    },
+    {
+      "id": 10,
+      "problem": "Municipalities prioritising efficiency of travel within the city when putting restrictions on protests.",
+      "solution": "AI system that priorities accepting the application withitout any restrictions except in the most extreme cases.",
+      "benefitType": "convenience",
+      "benefitText": "Around [number]% less likely that protests will have restrictions on the location",
+      "costType": "assembly",
+      "costText": "[number]% more distruptions in traffic"
+    },
+    {
+      "id": 11,
+      "problem": "Municipalities prioritising cost effectiveness when putting restrictions on protests.",
+      "solution": "AI system that priorities accepting the application withitout any restriction except in the most extreme cases.",
+      "benefitType": "money",
+      "benefitText": "Around [number]% less likely that protests will have restrictions on the location",
+      "costType": "assembly",
+      "costText": "€[number] more taxes paid each year"
+    },
+    {
+      "id": 12,
+      "problem": "Municipalities prioritising public safety within the city when putting restrictions on protests.",
+      "solution": "AI system that priorities accepting the application withitout any restriction except in the most extreme cases.",
+      "benefitType": "security",
+      "benefitText": "Around [number]% less likely that protests will have restrictions on the location",
+      "costType": "assembly",
+      "costText": "[number]% higher public safety risks"
+    },
+    {
+      "id": 13,
+      "problem": "Municipality services are too slow when hiring new workers, which delays important help and services.",
+      "solution": "AI system that finds and ranks the best job applicants.",
+      "benefitType": "convenience",
+      "benefitText": "Around [number]% more chance for applicants who are connected with [affected]",
+      "costType": "equality",
+      "costText": "[number]% slower municipality services"
+    },
+    {
+      "id": 14,
+      "problem": "Finding and training new municipality workers costs a lot of money.",
+      "solution": "AI system that finds and ranks the best job applicants.",
+      "benefitType": "money",
+      "benefitText": "€[number] less taxes paid each year",
+      "costType": "equality",
+      "costText": "Around [number]% less chance for applicants who are connected with [affected]"
+    },
+    {
+      "id": 15,
+      "problem": "Municipality workers have access to sensitive information that could threaten public safety if leaked to criminals.",
+      "solution": "AI system that finds and ranks the most trustworthy job applicants.",
+      "benefitType": "security",
+      "benefitText": "[number]% fewer public safety risks",
+      "costType": "equality",
+      "costText": "Around [number]% less chance for applicants who are connected with [affected]"
+    },
+    {
+      "id": 16,
+        "problem": "Municipalities use private, sensitive information to decide on the truthfulness of applications for benefits.",
+      "solution": "AI system that prioritises keeping the privacy of citizens over finding out the application is truthful.",
+      "benefitType": "convenience",
+      "benefitText": "Around [number]% less access to sensitive, personal information for [affected]",
+      "costType": "privacy",
+      "costText": "[number]% less efficient municipality services"
+
+    },
+    {
+      "id": 17,
+      "problem": "Municipalities use private, sensitive information to decide on the truthfulness of applications for benefits.",
+      "solution": "AI system that prioritises keeping the privacy of citizens over finding out the application is truthful.",
+      "benefitType": "money",
+      "benefitText": "Around [number]% less access to personal information for [affected]",
+      "costType": "privacy",
+      "costText": "€[number] more taxes paid each year to cover the additional benefits approved"
+    },
+    {
+      "id": 18,
+      "problem": "Police uses private, sensitive information to find violent criminals.",
+      "solution": "AI system that prioritises keeping the ptivacy of citizens over locating violent criminals",
+      "benefitType": "security",
+      "benefitText": "Around [number]% less access to personal information for [affected]",
+      "costType": "privacy",
+      "costText": "[number]% more public safety risks"
+    }
+  ]
+}
