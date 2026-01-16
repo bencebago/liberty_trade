@@ -29,12 +29,12 @@
     },
     {
       "id": 4,
-      "problem": "There is a lot of fake news on the internet that can mislead people.",
-      "solution": "AI system that checks if online news is true or false.",
+      "problem": "News organizations wants to publish stories that gets more engagement from users.",
+      "solution": "ÄI system that predicts how engaging a news story would be.",
       "benefitType": "convenience",
-      "benefitText": "[number]% less fake news seen by people",
+      "benefitText": "[number]% more engaging news, better experience",
       "costType": "press",
-      "costText": "Around [number]% less access to news content from [affected] media outlets"
+      "costText": "Around [number]% less access to investigative news content from [affected] media outlets"
     },
     {
       "id": 5,
