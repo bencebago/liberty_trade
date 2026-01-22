@@ -2,7 +2,7 @@
   "problems": [
     {
       "id": 1,
-      "problem": "Social media websites use cheap AI softwares for content moderation, which often lead to deleting political opinions.",
+      "problem": "Social media websites use cheap AI softwares for moderating aggressive arguments, which often lead to deleting political opinions.",
       "solution": "The corporation decided to upgrade to a more expensive AI that priroitizes keeping political opinions.",
       "solution2": "The government mandated an upgrade to a more expensive AI that priroitizes keeping  political opinions.",
       "benefitType": "money",
@@ -23,7 +23,8 @@
     {
       "id": 3,
       "problem": "Social media websites need to moderate aggressive arguments between users, which often lead to deleting political opinions.",
-      "solution": "AI system that prioritises keeping the posts to keep more political opinions.",
+      "solution": "The corporation decided to upgrade to an AI that priroitizes keeping political opinions over removing aggressive arguments",
+      "solution2": "The government mandated an upgrade to an AI that priroitizes keeping political opinions over removing aggressive arguments.",
       "benefitType": "convenience",
       "benefitText": "Around [number]% more opportunities to share political opinions for [affected]",
       "costType": "speech",
@@ -32,7 +33,8 @@
     {
       "id": 4,
       "problem": "News outlets often try to publish the most engaging stories, which leads to some news getting left out.",
-      "solution": "AI system that prioritises informativeness in publishing.",
+      "solution": "The corporation decided to upgrade to an AI system that prioritises informativeness in publishing.",
+      "solution2": "The government mandated an upgrade to an AI system that prioritises informativeness in publishing.",
       "benefitType": "convenience",
       "benefitText": "Around [number]% more access to investigative reporting from [affected] media outlets.", 
       "costType": "press",
@@ -41,7 +43,8 @@
     {
       "id": 5,
       "problem": "News outlets often try to publish the most engaging stories, which leads to some news getting left out.",
-      "solution": "AI system that prioritises informativeness in publishing.",
+      "solution": "The corporation decided to upgrade to a more expensive AI system that prioritises informativeness in publishing.",
+      "solution2": "The government mandated an upgrade to a more expensive AI system that prioritises informativeness in publishing.",
       "benefitType": "money",
       "benefitText": "Around [number]% more access to investigative reporting from [affected] media outlets.",
       "costType": "press",
@@ -50,7 +53,8 @@
     {
       "id": 6,
       "problem": "News outlets might suppress stories that may interfere with police operations leading to some news getting left out.",
-      "solution": "AI system that prioritises informativeness over police operations.",
+      "solution": "The corporation decided to upgrade to an AI system that prioritises informativeness over police operations.",
+      "solution2": "The government mandated an upgrade to an AI system that prioritises informativeness over police operations.",
       "benefitType": "security",
       "benefitText": "Around [number]% more access to news content from [affected] media outlets",
       "costType": "press",
@@ -58,8 +62,9 @@
     },
     {
       "id": 7,
-      "problem": "Courts are biased in certain types of cases that lead to unfair sentencing.",
-      "solution": "AI system informs judges to be less biased in sentencing.",
+      "problem": "Courts are using an AI system that is biased in certain types of cases that lead to unfair sentencing.",
+      "solution": "The corporation that owns the AI, upgraded it to prioritze decreasing biases in sentencing over speed.",
+      "solution2": "The government mandated the upgrade of the AI system that prioritizes decreasing biases in sentencing over speed.",
       "benefitType": "convenience",
       "benefitText": "Around [number]% more chance to get a fair sentencing in cases that usually affect [affected]",
       "costType": "due_process",
@@ -67,8 +72,9 @@
     },
     {
       "id": 8,
-      "problem": "Courts are biased in certain types of cases that lead to unfair sentencing.",
-      "solution": "AI system informs judges to be less biased in sentencing.",
+      "problem": "Courts are using an AI system that is biased in certain types of cases that lead to unfair sentencing.",
+      "solution": "The corporation that owns the AI, upgraded it to a more expensive model that prioritizes decreasing biases in sentencing.",
+      "solution2": "The government mandated the upgrade to a more expensive AI system that prioritizes decreasing biases in sentencing.",
       "benefitType": "money",
       "benefitText": "Around [number]% more chance to get fair sentencing in cases that usually affect [affected]",
       "costType": "due_process",
@@ -76,8 +82,9 @@
     },
     {
       "id": 9,
-      "problem": "Courts are biased in certain cases and more likely to sentence innocent people for prison.",
-      "solution": "AI system prioritises keeping inoocent people out of prioson.",
+      "problem": "Courts are using an AI system that is biased in certain types of cases that lead to sentencing innocent people for prison.",
+      "solution": "The corporation that owns the AI, upgraded it to prioritise keeping innocent people out of prioson.",
+      "solution2": "The government mandated an upgrade to the AI system that prioritise keeping innocent people out of prison.",
       "benefitType": "security",
       "benefitText": "Around [number]% more chance to get fair sentencing in cases that usually affect [affected]",
       "costType": "due_process",
