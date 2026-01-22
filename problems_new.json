@@ -2,8 +2,9 @@
   "problems": [
     {
       "id": 1,
-      "problem": "Social media websites need to moderate aggressive arguments between users, which often lead to deleting political opinions.",
-      "solution": "AI system that is more targeted toward aggressive arguments and keeps more political opinions.",
+      "problem": "Social media websites use cheap AI softwares for content moderation, which often lead to deleting political opinions.",
+      "solution": "The corporation decided to upgrade to a more expensive AI that priroitizes keeping political opinions.",
+      "solution2": "The government mandated an upgrade to a more expensive AI that priroitizes keeping  political opinions.",
       "benefitType": "money",
       "benefitText": "Around [number]% more opportunities to share politicial opinions for [affected]",
       "costType": "speech",
@@ -12,7 +13,8 @@
      {
       "id": 2,
       "problem": "Social media websites need to moderate calls for violence from extremist groups between users, which often leads to deleting political opinions.",
-      "solution": "AI system that removes fewer posts and keeps more political opinions.",
+      "solution": "The corporation decided to upgrade to an AI that priroitizes keeping political opinions over removing calls for violence.",
+      "solution2": "The government mandated an upgrade to an AI that priroitizes keeping political opinions over removing calls for violence.",
       "benefitType": "security",
       "benefitText": "Around [number]% more opportunities to share political opinions for [affected]",
       "costType": "speech",
@@ -21,7 +23,7 @@
     {
       "id": 3,
       "problem": "Social media websites need to moderate aggressive arguments between users, which often lead to deleting political opinions.",
-      "solution": "AI system that removes fewer posts and keeps more political opinions.",
+      "solution": "AI system that prioritises keeping the posts to keep more political opinions.",
       "benefitType": "convenience",
       "benefitText": "Around [number]% more opportunities to share political opinions for [affected]",
       "costType": "speech",
