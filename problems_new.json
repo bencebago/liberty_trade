@@ -2,19 +2,19 @@
   "problems": [
     {
       "id": 1,
-      "problem": "Social media websites use cheap AI softwares for moderating aggressive arguments, which often lead to deleting political opinions.",
-      "solution": "The corporation decided to upgrade to a more expensive AI that priroitizes keeping political opinions.",
-      "solution2": "The government mandated an upgrade to a more expensive AI that priroitizes keeping  political opinions.",
+      "problem": "Social media websites use cheap AI softwares to moderate aggressive arguments, which often leads to deleting political opinions.",
+      "solution": "The corporation decided to upgrade to a more expensive AI that prioritizes keeping political opinions over removing aggressive arguments.",
+      "solution2": "The government mandated an upgrade to a more expensive AI that prioritizes keeping political opinions over removing aggressive arguments.",
       "benefitType": "money",
       "benefitText": "Around [number]% more opportunities to share politicial opinions for [affected]",
       "costType": "speech",
-      "costText": "€[number] higher yearly fees for using the platform"
+      "costText": "€[number] higher yearly platform fees"
     },
      {
       "id": 2,
-      "problem": "Social media websites need to moderate calls for violence from extremist groups between users, which often leads to deleting political opinions.",
-      "solution": "The corporation decided to upgrade to an AI that priroitizes keeping political opinions over removing calls for violence.",
-      "solution2": "The government mandated an upgrade to an AI that priroitizes keeping political opinions over removing calls for violence.",
+      "problem": "Social media websites moderate calls for violence from extremist groups between users, which often leads to deleting political opinions.",
+      "solution": "The corporation decided to upgrade to an AI that prioritizes keeping political opinions over removing calls for violence.",
+      "solution2": "The government mandated an upgrade to an AI that prioritizes keeping political opinions over removing calls for violence.",
       "benefitType": "security",
       "benefitText": "Around [number]% more opportunities to share political opinions for [affected]",
       "costType": "speech",
@@ -22,9 +22,9 @@
     },
     {
       "id": 3,
-      "problem": "Social media websites need to moderate aggressive arguments between users, which often lead to deleting political opinions.",
-      "solution": "The corporation decided to upgrade to an AI that priroitizes keeping political opinions over removing aggressive arguments",
-      "solution2": "The government mandated an upgrade to an AI that priroitizes keeping political opinions over removing aggressive arguments.",
+      "problem": "Social media websites moderate aggressive arguments between users, which often lead to deleting political opinions.",
+      "solution": "The corporation decided to upgrade to an AI that prioritizes keeping political opinions over removing aggressive arguments.",
+      "solution2": "The government mandated an upgrade to an AI that prioritizes keeping political opinions over removing aggressive arguments.",
       "benefitType": "convenience",
       "benefitText": "Around [number]% more opportunities to share political opinions for [affected]",
       "costType": "speech",
@@ -32,97 +32,97 @@
     },
     {
       "id": 4,
-      "problem": "News outlets often try to publish the most engaging stories, which leads to some news getting left out.",
-      "solution": "The corporation decided to upgrade to an AI system that prioritises informativeness in publishing.",
-      "solution2": "The government mandated an upgrade to an AI system that prioritises informativeness in publishing.",
+      "problem": "News outlets often try to publish the most engaging stories, which leads to some news being left out.",
+      "solution": "The corporation decided to upgrade to an AI system that prioritizes informativeness in publishing.",
+      "solution2": "The government mandated an upgrade to an AI system that prioritizes informativeness in publishing.",
       "benefitType": "convenience",
       "benefitText": "Around [number]% more access to investigative reporting from [affected] media outlets.", 
       "costType": "press",
-      "costText": "[number]% less engaging news, worse jounral experience"
+      "costText": "[number]% worse news reading experience"
     },
     {
       "id": 5,
-      "problem": "News outlets often try to publish the most engaging stories, which leads to some news getting left out.",
-      "solution": "The corporation decided to upgrade to a more expensive AI system that prioritises informativeness in publishing.",
-      "solution2": "The government mandated an upgrade to a more expensive AI system that prioritises informativeness in publishing.",
+      "problem": "News outlets often try to publish the most engaging stories, which leads to some news being left out.",
+      "solution": "The corporation decided to upgrade to a more expensive AI system that prioritizes informativeness in publishing.",
+      "solution2": "The government mandated an upgrade to a more expensive AI system that prioritizes informativeness in publishing.",
       "benefitType": "money",
       "benefitText": "Around [number]% more access to investigative reporting from [affected] media outlets.",
       "costType": "press",
-      "costText": "€[number] higher yearly fees for accessing the news" 
+      "costText": "€[number] higher yearly fees to access news" 
     },
     {
       "id": 6,
-      "problem": "News outlets might suppress stories that may interfere with police operations leading to some news getting left out.",
-      "solution": "The corporation decided to upgrade to an AI system that prioritises informativeness over police operations.",
-      "solution2": "The government mandated an upgrade to an AI system that prioritises informativeness over police operations.",
+      "problem": "News outlets might downplay stories that could interfere with police operations, which leads to some news being left out.",
+      "solution": "The corporation decided to upgrade to an AI system that prioritizes informativeness over police operations.",
+      "solution2": "The government mandated an upgrade to an AI system that prioritizes informativeness over police operations.",
       "benefitType": "security",
-      "benefitText": "Around [number]% more access to news content from [affected] media outlets",
+      "benefitText": "Around [number]% more access to investigative reporting from [affected] media outlets",
       "costType": "press",
-      "costText": "[number]% less likelihood of police catching criminals"
+      "costText": "[number]% less likelihood of police catching criminals (reduced success of police operations?)"
     },
     {
       "id": 7,
-      "problem": "Courts are using an AI system that is biased in certain types of cases that lead to unfair sentencing.",
-      "solution": "The corporation that owns the AI, upgraded it to prioritze decreasing biases in sentencing over speed.",
-      "solution2": "The government mandated the upgrade of the AI system that prioritizes decreasing biases in sentencing over speed.",
+      "problem": "Courts use an AI system that is biased in certain types of cases and leads to unfair sentencing.",
+      "solution": "The corporation that owns the AI upgraded it to prioritze decreasing biases over speed.",
+      "solution2": "The government mandated the upgrade of the AI system that prioritizes decreasing biases over speed.",
       "benefitType": "convenience",
-      "benefitText": "Around [number]% more chance to get a fair sentencing in cases that usually affect [affected]",
+      "benefitText": "Around [number]% more chance of fair sentencing in cases that usually affect [affected]",
       "costType": "due_process",
       "costText": "[number]% slower handling of court cases"
     },
     {
       "id": 8,
-      "problem": "Courts are using an AI system that is biased in certain types of cases that lead to unfair sentencing.",
-      "solution": "The corporation that owns the AI, upgraded it to a more expensive model that prioritizes decreasing biases in sentencing.",
-      "solution2": "The government mandated the upgrade to a more expensive AI system that prioritizes decreasing biases in sentencing.",
+      "problem": "Courts use an AI system that is biased in certain types of cases and leads to unfair sentencing.",
+      "solution": "The corporation that owns the AI upgraded it to a more expensive model that prioritizes decreasing biases.",
+      "solution2": "The government mandated the upgrade to a more expensive AI system that prioritizes decreasing biases.",
       "benefitType": "money",
-      "benefitText": "Around [number]% more chance to get fair sentencing in cases that usually affect [affected]",
+      "benefitText": "Around [number]% more chance of fair sentencing in cases that usually affect [affected]",
       "costType": "due_process",
       "costText": "€[number] more taxes paid each year"
     },
     {
       "id": 9,
-      "problem": "Courts are using an AI system that is biased in certain types of cases that lead to sentencing innocent people for prison.",
-      "solution": "The corporation that owns the AI, upgraded it to prioritise keeping innocent people out of prioson.",
-      "solution2": "The government mandated an upgrade to the AI system that prioritise keeping innocent people out of prison.",
+      "problem": "Courts are using an AI system that is biased in certain types of cases and leads to sentencing innocent people to prison.",
+      "solution": "The corporation that owns the AI upgraded it to prioritize keeping innocent people out of prioson.",
+      "solution2": "The government mandated an upgrade to the AI system that prioritizes keeping innocent people out of prison.",
       "benefitType": "security",
-      "benefitText": "Around [number]% more chance to get fair sentencing in cases that usually affect [affected]",
+      "benefitText": "Around [number]% more chance of fair sentencing in cases that usually affect [affected]",
       "costType": "due_process",
       "costText": "[number]% higher public safety risks"
     },
      {
       "id": 10,
-      "problem": "Municipalities us an AI system that prioritises efficiency of travel within the city when putting restrictions on protests.",
-      "solution": "The corporation that owns the AI system upgraded it to prioritise accepting applications without any restriction except in the most extreme cases.",
-      "solution2": "The government decides to change their AI system to prioritise accepting applications without any restriction except in the most extreme cases.",
+      "problem": "Municipalities use an AI system that prioritizes traffic efficients when putting restrictions on protests.",
+      "solution": "The corporation that owns the AI system upgraded it to prioritize accepting applications without restrictions except in extreme cases.",
+      "solution2": "The government decides to change their AI system to prioritize accepting applications without restrictions except in extreme cases.",
       "benefitType": "convenience",
-      "benefitText": "Around [number]% less likely that protests will have restrictions on the location",
+      "benefitText": "Around [number]% less chance of restrictions on protest location (Does this work for the NL?)",
       "costType": "assembly",
-      "costText": "[number]% more distruptions in traffic"
+      "costText": "[number]% more traffic disruptions"
     },
     {
       "id": 11,
-      "problem": "Municipalities use an AI system that prioritises cost effectiveness when putting restrictions on protests.",
-      "solution": "The corporation that owns the AI system upgraded it to prioritise accepting applications without any restriction except in the most extreme cases.",
-      "solution2": "The government mandated an upgrade to the AI system to prioritise accepting applications without any restriction except in the most extreme cases.",
+      "problem": "Municipalities use an AI system that prioritizes cost effectiveness when putting restrictions on protests.",
+      "solution": "The corporation that owns the AI system upgraded it to prioritize accepting applications without restrictions except in extreme cases.",
+      "solution2": "The government mandated an upgrade to the AI system to prioritize accepting applications without restrictions except in extreme cases.",
       "benefitType": "money",
-      "benefitText": "Around [number]% less likely that protests will have restrictions on the location",
+      "benefitText": "Around [number]% less chances of restrictions on protest location",
       "costType": "assembly",
       "costText": "€[number] more taxes paid each year"
     },
     {
       "id": 12,
-      "problem": "Municipalities use an AI system that prioritises public safety within the city when putting restrictions on protests.",
+      "problem": "Municipalities use an AI system that prioritizes public safety within the city when putting restrictions on protests.",
       "solution": "The corporation that owns the AI system upgraded it to prioritise accepting applications without any restriction except in the most extreme cases.",
       "solution2": "The government mandated an upgrade to the AI system to prioritise accepting applications without any restriction except in the most extreme cases.",
       "benefitType": "security",
-      "benefitText": "Around [number]% less likely that protests will have restrictions on the location",
+      "benefitText": "Around [number]% less chances of restrictions on protest location",
       "costType": "assembly",
       "costText": "[number]% higher public safety risks"
     },
     {
-      "id": 13,
-      "problem": "Municipality services are too slow when hiring new workers, which delays important help and services.",
+      "id": 13 (We will not use 13-15, right? It's hard to make things 'more equal'),
+      "problem": "Municipality services are slow when hiring new workers, which delays important help and services.",
       "solution": "AI system that finds and ranks the best job applicants.",
       "benefitType": "convenience",
       "benefitText": "Around [number]% more chance for applicants who are connected with [affected]",
@@ -149,20 +149,20 @@
     },
     {
       "id": 16,
-      "problem": "Municipalities use an AI system that takes private, sensitive information to decide on the truthfulness of applications for benefits.",
-      "solution": "The corporation that owns the AI system upgraded it to prioritise keeping the privacy of citizens over finding out the application is truthful.",
-      "solution2": "The government decides to change their AI system to prioritise keeping the privacy of citizens over finding out the application is truthful.",
+      "problem": "Municipalities use an AI system that takes private, sensitive information to decide on the truthfulness of benefit applications.",
+      "solution": "The corporation that owns the AI system upgraded it to prioritize citizen privacy over finding out application truthfulness.",
+      "solution2": "The government decides to change their AI system to prioritize citizen privacy over finding out application truthfulness.",
       "benefitType": "convenience",
-      "benefitText": "Around [number]% less access to sensitive, personal information for [affected]",
+      "benefitText": "Around [number]% less access to personal information for [affected]",
       "costType": "privacy",
       "costText": "[number]% less efficient municipality services"
 
     },
     {
       "id": 17,
-      "problem": "Municipalities use an AI system that takes private, sensitive information to decide on the truthfulness of applications for benefits.",
-      "solution": "The corporation that owns the AI system upgraded it to prioritise keeping the privacy of citizens over finding out the application is truthful.",
-      "solution2": "The government mandated an upgrade to the AI system to prioritise keeping the privacy of citizens over finding out the application is truthful.",
+      "problem": "Municipalities use an AI system that takes private, sensitive information to decide on the truthfulness of benefit applications.",
+      "solution": "The corporation that owns the AI system upgraded it to prioritize citizen privacy over finding out application is truthfulness.",
+      "solution2": "The government mandated an upgrade to the AI system to prioritize keeping citizen privacy over finding out application truthfulness.",
       "benefitType": "money",
       "benefitText": "Around [number]% less access to personal information for [affected]",
       "costType": "privacy",
@@ -171,8 +171,8 @@
     {
       "id": 18,
       "problem": "Police use an AI system that takes private, sensitive information to find violent criminals.",
-      "solution": "The corporation that owns the AI system upgraded it to prioritise keeping the privacy of citizens over locating violent criminals",
-      "solution2": "The government mandated an upgrade to the AI system to prioritise keeping the privacy of citizens over locating violent criminals",
+      "solution": "The corporation that owns the AI system upgraded it to prioritize citizen privacy over locating violent criminals",
+      "solution2": "The government mandated an upgrade to the AI system to prioritize citizen privacy over locating violent criminals",
       "benefitType": "security",
       "benefitText": "Around [number]% less access to personal information for [affected]",
       "costType": "privacy",
@@ -180,34 +180,34 @@
     },
         {
       "id": 19,
-        "problem": "Some platforms allow advertisement campaigns uses personalized advertismenet to manipulate and target people to sell products.",
+        "problem": "Some platforms allow personalized advertisement campaigns that manipulate and target people to sell products.",
       "solution": "The corporation that owns the AI system upgraded it to prioritize deleting personalized campaigns and advertisements.",
       "solution2": "The government mandated that platforms upgrade to AI recommender systems that prioritizes deleting personalized campaigns and advertisements.",
       "benefitType": "convenience",
       "benefitText": "Around [number]% less likely to be exposed to personalized campaigns",
       "costType": "thought",
-      "costText": "[number]% worse user experience, less relevant advertisements"
+      "costText": "[number]% worse user experience (less relevant advertisements - incorporate?)"
 
     },
     {
       "id": 20,
-      "problem": "Some platforms allow advertisement campaigns that uses personalized advertismenet to manipulate and target people to sell products.",
+      "problem": "Some platforms allow personalized advertisement campaigns that manipulate and target people to sell products.",
       "solution": "The corporation that owns the AI system upgraded it to prioritize deleting personalized campaigns and advertisements.",
       "solution2": "The government mandated that platforms upgrade to AI recommender systems that prioritizes deleting personalized campaigns and advertisements.",
       "benefitType": "money",
       "benefitText": "Around [number]% less likely to be exposed to personalized campaigns",
       "costType": "thought",
-      "costText": "€[number] yearly cost of online platform fees"
+      "costText": "€[number] higher yearly platform fees"
     },
     {
       "id": 21,
-      "problem": "Some platforms allow radicalization reduction campaigns to overly target and manipulate people (without their knowledge) to change their minds.",
+      "problem": "Some platforms allow radicalization reduction campaigns that target and manipulate people (without their knowledge) to change their minds.",
       "solution": "The corporation that owns the AI system upgraded it to prioritize deleting personalized campaigns and advertisements.",
       "solution2": "The government mandated that platforms upgrade to AI recommender systems that prioritizes deleting personalized campaigns and advertisements.",
       "benefitType": "security",
-      "benefitText": "Around [number]% less likely to be exposed to personalized campaigns to reduce radicaliation",
+      "benefitText": "Around [number]% less likely to be exposed to personalized campaigns to reduce radicalization",
       "costType": "thought",
-      "costText": "[number]% more public safety risks"
+      "costText": "[number]% higher public safety risks"
     }
   ]
 }
