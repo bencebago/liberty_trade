@@ -26,9 +26,9 @@
       "solution": "The corporation decided to upgrade to an AI that priroitizes removing aggressive arguments over keeping political opinions.",
       "solution2": "The government mandated an upgrade to an AI that priroitizes removing aggressive arguments over keeping political opinions.",
       "benefitType": "convenience",
-      "benefitText": "Around [number]% more opportunities to share political opinions for [affected]",
+      "benefitText": "[number]% worse experience for users",
       "costType": "speech",
-      "costText": "[number]% worse experience for users"
+      "costText": "Around [number]% more opportunities to share political opinions for [affected]"
     },
     {
       "id": 4,
@@ -96,7 +96,7 @@
       "solution": "The corporation that owns the AI system upgraded it to prioritise accepting applications without any restriction except in the most extreme cases.",
       "solution2": "The government decides to change their AI system to prioritise accepting applications without any restriction except in the most extreme cases.",
       "benefitType": "convenience",
-      "benefitText": "Around [number]% less likely that protests will have restrictions on the location",
+      "benefitText": "Around [number]% less likely that protests will have restrictions on the location for [affected]",
       "costType": "assembly",
       "costText": "[number]% more distruptions in traffic"
     },
@@ -106,7 +106,7 @@
       "solution": "The corporation that owns the AI system upgraded it to prioritise accepting applications without any restriction except in the most extreme cases.",
       "solution2": "The government mandated an upgrade to the AI system to prioritise accepting applications without any restriction except in the most extreme cases.",
       "benefitType": "money",
-      "benefitText": "Around [number]% less likely that protests will have restrictions on the location",
+      "benefitText": "Around [number]% less likely that protests will have restrictions on the location for [affected]",
       "costType": "assembly",
       "costText": "€[number] more taxes paid each year"
     },
@@ -116,36 +116,9 @@
       "solution": "The corporation that owns the AI system upgraded it to prioritise accepting applications without any restriction except in the most extreme cases.",
       "solution2": "The government mandated an upgrade to the AI system to prioritise accepting applications without any restriction except in the most extreme cases.",
       "benefitType": "security",
-      "benefitText": "Around [number]% less likely that protests will have restrictions on the location",
+      "benefitText": "Around [number]% less likely that protests will have restrictions on the location for [affected]",
       "costType": "assembly",
       "costText": "[number]% higher public safety risks"
-    },
-    {
-      "id": 13,
-      "problem": "Municipality services are too slow when hiring new workers, which delays important help and services.",
-      "solution": "AI system that finds and ranks the best job applicants.",
-      "benefitType": "convenience",
-      "benefitText": "Around [number]% more chance for applicants who are connected with [affected]",
-      "costType": "equality",
-      "costText": "[number]% slower municipality services"
-    },
-    {
-      "id": 14,
-      "problem": "Finding and training new municipality workers costs a lot of money.",
-      "solution": "AI system that finds and ranks the best job applicants.",
-      "benefitType": "money",
-      "benefitText": "€[number] less taxes paid each year",
-      "costType": "equality",
-      "costText": "Around [number]% less chance for applicants who are connected with [affected]"
-    },
-    {
-      "id": 15,
-      "problem": "Municipality workers have access to sensitive information that could threaten public safety if leaked to criminals.",
-      "solution": "AI system that finds and ranks the most trustworthy job applicants.",
-      "benefitType": "security",
-      "benefitText": "[number]% fewer public safety risks",
-      "costType": "equality",
-      "costText": "Around [number]% less chance for applicants who are connected with [affected]"
     },
     {
       "id": 16,
@@ -186,7 +159,7 @@
       "benefitType": "convenience",
       "benefitText": "Around [number]% more likely to be exposed to personalized campaigns",
       "costType": "thought",
-      "costText": "[number]% better user experience, more relevant advertisements"
+      "costText": "[number]% better user experience"
     },
     {
       "id": 20,
@@ -200,7 +173,7 @@
     },
     {
       "id": 21,
-      "problem": "Some platforms allow radicalization reduction campaigns to overly target and manipulate people (without their knowledge) to change their minds.",
+      "problem": "Some platforms allow radicalization reduction campaigns to overly target and manipulate people to change their minds.",
       "solution": "The corporation that owns the AI system upgraded it to prioritize deleting personalized campaigns and advertisements.",
       "solution2": "The government mandated that platforms upgrade to AI recommender systems that prioritizes deleting personalized campaigns and advertisements.",
       "benefitType": "security",
