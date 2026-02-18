@@ -153,11 +153,11 @@
     },
         {
       "id": 19,
-        "problem": "Some platforms allow personalized advertisement campaigns that manipulate and target people to sell products.",
+      "problem": "Some platforms allow personalized advertisement campaigns that manipulate and target people to sell products.",
       "solution": "The corporation that owns the AI system upgraded it to prioritize deleting personalized campaigns and advertisements.",
       "solution2": "The government mandated that platforms upgrade to AI recommender systems that prioritizes deleting personalized campaigns and advertisements.",
       "benefitType": "convenience",
-      "benefitText": "Around [number]% less likely to be exposed to personalized campaigns",
+      "benefitText": "Around [number]% less likely to be exposed to personalized campaigns targeting [affected]",
       "costType": "thought",
       "costText": "[number]% worse user experience."
 
@@ -168,7 +168,7 @@
       "solution": "The corporation that owns the AI system upgraded it to prioritize deleting personalized campaigns and advertisements.",
       "solution2": "The government mandated that platforms upgrade to AI recommender systems that prioritizes deleting personalized campaigns and advertisements.",
       "benefitType": "money",
-      "benefitText": "Around [number]% less likely to be exposed to personalized campaigns",
+      "benefitText": "Around [number]% less likely to be exposed to personalized campaigns targeting [affected]",
       "costType": "thought",
       "costText": "€[number] higher yearly platform fees"
     },
@@ -178,7 +178,7 @@
       "solution": "The corporation that owns the AI system upgraded it to prioritize deleting personalized campaigns and advertisements.",
       "solution2": "The government mandated that platforms upgrade to AI recommender systems that prioritizes deleting personalized campaigns and advertisements.",
       "benefitType": "security",
-      "benefitText": "Around [number]% less likely to be exposed to personalized campaigns to reduce radicalization",
+      "benefitText": "Around [number]% less likely to be exposed to personalized campaigns to reduce radicalization of [affected]",
       "costType": "thought",
       "costText": "[number]% higher public safety risks"
     }
